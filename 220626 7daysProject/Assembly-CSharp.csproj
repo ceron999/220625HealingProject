@@ -53,42 +53,20 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Mechanics\SpawnPoint.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\PlayerEnemyCollision.cs" />
-    <Compile Include="Assets\Scripts\Core\HeapQueue.cs" />
-    <Compile Include="Assets\Scripts\View\ParallaxLayer.cs" />
-    <Compile Include="Assets\Scripts\Mechanics\VictoryZone.cs" />
-    <Compile Include="Assets\Scripts\Mechanics\PlayAudioClip.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\PlayerTokenCollision.cs" />
-    <Compile Include="Assets\Scripts\Mechanics\GameController.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\EnablePlayerInput.cs" />
-    <Compile Include="Assets\Scripts\Mechanics\Health.cs" />
-    <Compile Include="Assets\Scripts\Mechanics\EnemyController.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\PlayerLanded.cs" />
-    <Compile Include="Assets\Scripts\Mechanics\KinematicObject.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\PlayerDeath.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\PlayerSpawn.cs" />
-    <Compile Include="Assets\Scripts\Mechanics\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\View\AnimatedTile.cs" />
-    <Compile Include="Assets\Scripts\Mechanics\TokenInstance.cs" />
-    <Compile Include="Assets\Scripts\UI\MainUIController.cs" />
-    <Compile Include="Assets\Scripts\Mechanics\AnimationController.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\PlayerStopJump.cs" />
-    <Compile Include="Assets\Scripts\Core\Simulation.cs" />
-    <Compile Include="Assets\Scripts\Mechanics\PatrolPath.Mover.cs" />
-    <Compile Include="Assets\Scripts\Mechanics\TokenController.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\PlayerEnteredVictoryZone.cs" />
-    <Compile Include="Assets\Scripts\Mechanics\DeathZone.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\PlayerJumped.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\PlayerEnteredDeathZone.cs" />
-    <Compile Include="Assets\Scripts\Core\Simulation.Event.cs" />
-    <Compile Include="Assets\Scripts\Core\Fuzzy.cs" />
-    <Compile Include="Assets\Scripts\Mechanics\PatrolPath.cs" />
-    <Compile Include="Assets\Scripts\Model\PlatformerModel.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\EnemyDeath.cs" />
-    <Compile Include="Assets\Scripts\UI\MetaGameController.cs" />
-    <Compile Include="Assets\Scripts\Core\Simulation.InstanceRegister.cs" />
-    <Compile Include="Assets\Scripts\Gameplay\HealthIsZero.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Mir.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Craftpix\craftpix-891178-free-3-character-sprite-sheets-pixel-art\license.txt" />
+    <None Include="Assets\Craftpix\craftpix-981000-blacksmith-craft-asset-pixel-art-pack\License.txt" />
+    <None Include="Assets\Craftpix\craftpix-981000-blacksmith-craft-asset-pixel-art-pack\Font.txt" />
+    <None Include="Assets\Craftpix\craftpix-891178-free-3-character-sprite-sheets-pixel-art\Font.txt" />
+    <None Include="Assets\Craftpix\craftpix-785613-cookery-game-assets-pixel-art-pack\Font.txt" />
+    <None Include="Assets\Craftpix\craftpix-781162-simple-platformer-tileset-pixel-art\Font.txt" />
+    <None Include="Assets\Craftpix\craftpix-net-527225-farming-pixel-art-game-assets-pack\License.txt" />
+    <None Include="Assets\Craftpix\craftpix-785613-cookery-game-assets-pixel-art-pack\License.txt" />
+    <None Include="Assets\Craftpix\craftpix-781162-simple-platformer-tileset-pixel-art\license.txt" />
+    <None Include="Assets\Craftpix\craftpix-net-527225-farming-pixel-art-game-assets-pack\Font.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -667,6 +645,9 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.2D.Tilemap.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Tilemap.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.InteractiveTutorialsFramework">
       <HintPath>Library\ScriptAssemblies\UnityEditor.InteractiveTutorialsFramework.dll</HintPath>
     </Reference>
@@ -681,6 +662,9 @@
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Postprocessing.Editor">
       <HintPath>Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll</HintPath>
