@@ -1,6 +1,6 @@
 Using pre-set license
 Built from '2020.3/staging' branch; Version is '2020.3.22f1 (e1a7f79fd887) revision 14788599'; Using compiler version '192528614'; Build Type 'Release'
-OS: 'Windows 10 Pro; OS build 19044.1766; Version 2009; 64bit' Language: 'ko' Physical Memory: 16343 MB
+OS: 'Windows 10 Education; OS build 19044.1706; Version 2009; 64bit' Language: 'ko' Physical Memory: 16108 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
 
 COMMAND LINE ARGUMENTS:
@@ -11,176 +11,113 @@ C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/ceron/Desktop/220626 7daysProject
+C:/Users/ceron/Desktop/220625HealingProject/220626 7daysProject
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-51631
-Successfully changed project path to: C:/Users/ceron/Desktop/220626 7daysProject
-C:/Users/ceron/Desktop/220626 7daysProject
+61629
+Successfully changed project path to: C:/Users/ceron/Desktop/220625HealingProject/220626 7daysProject
+C:/Users/ceron/Desktop/220625HealingProject/220626 7daysProject
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 63.95 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 96.50 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.22f1 (e1a7f79fd887)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/ceron/Desktop/220626 7daysProject/Assets
+[Subsystems] Discovering subsystems at path C:/Users/ceron/Desktop/220625HealingProject/220626 7daysProject/Assets
 GfxDevice: creating device client; threaded=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce GTX 1060 3GB (ID=0x1c02)
+    Renderer: Intel(R) Iris(R) Xe Graphics (ID=0x9a49)
     Vendor:   
-    VRAM:     2988 MB
-    Driver:   27.21.14.5671
+    VRAM:     8054 MB
+    Driver:   27.20.100.9565
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56708
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56756
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005779 seconds.
+Registered in 0.113621 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 61.97 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 38.37 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.420 seconds
+- Completed reload, in  2.978 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1420ms)
-		BeginReloadAssembly (106ms)
+	ReloadAssembly (2979ms)
+		BeginReloadAssembly (1939ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (489ms)
-			LoadAssemblies (100ms)
+		EndReloadAssembly (535ms)
+			LoadAssemblies (1937ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (164ms)
+			SetupTypeCache (322ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (30ms)
-			SetupLoadedEditorAssemblies (192ms)
+			RebuildScriptCaches (19ms)
+			SetupLoadedEditorAssemblies (119ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (62ms)
-				BeforeProcessingInitializeOnLoad (15ms)
-				ProcessInitializeOnLoadAttributes (81ms)
-				ProcessInitializeOnLoadMethodAttributes (29ms)
+				RefreshPlugins (38ms)
+				BeforeProcessingInitializeOnLoad (7ms)
+				ProcessInitializeOnLoadAttributes (49ms)
+				ProcessInitializeOnLoadMethodAttributes (22ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.010994 seconds.
+Registered in 0.278410 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.229 seconds
+- Completed reload, in  3.670 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1230ms)
-		BeginReloadAssembly (183ms)
+	ReloadAssembly (3675ms)
+		BeginReloadAssembly (97ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (21ms)
-		EndReloadAssembly (965ms)
-			LoadAssemblies (133ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (3534ms)
+			LoadAssemblies (1751ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (324ms)
+			SetupTypeCache (789ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (54ms)
-			SetupLoadedEditorAssemblies (376ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (885ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (5ms)
+				InitializePlatformSupportModulesInManaged (3ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (111ms)
-				ProcessInitializeOnLoadAttributes (224ms)
-				ProcessInitializeOnLoadMethodAttributes (17ms)
-				AfterProcessingInitializeOnLoad (17ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (46ms)
+				ProcessInitializeOnLoadAttributes (318ms)
+				ProcessInitializeOnLoadMethodAttributes (513ms)
+				AfterProcessingInitializeOnLoad (4ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2017 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 88.7 MB.
-System memory in use after: 86.7 MB.
-
-Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 2423.
-Total: 4.201700 ms (FindLiveObjects: 0.167000 ms CreateObjectMapping: 0.067500 ms MarkObjects: 2.954400 ms  DeleteObjects: 1.011700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  path: ProjectSettings/TagManager.asset
-  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8b470de466e72950ce33fd681e15a7f') in 0.047815 seconds 
-  Import took 0.051666 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.015586 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.211 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1212ms)
-		BeginReloadAssembly (183ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (62ms)
-		EndReloadAssembly (947ms)
-			LoadAssemblies (136ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (326ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (44ms)
-			SetupLoadedEditorAssemblies (356ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (111ms)
-				ProcessInitializeOnLoadAttributes (209ms)
-				ProcessInitializeOnLoadMethodAttributes (13ms)
-				AfterProcessingInitializeOnLoad (17ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.49 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2011 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 88.7 MB.
+System memory in use before: 88.8 MB.
 System memory in use after: 86.8 MB.
 
-Unloading 46 unused Assets to reduce memory usage. Loaded Objects now: 2425.
-Total: 4.428500 ms (FindLiveObjects: 0.288600 ms CreateObjectMapping: 0.169300 ms MarkObjects: 3.159600 ms  DeleteObjects: 0.809600 ms)
+Unloading 54 unused Assets to reduce memory usage. Loaded Objects now: 2423.
+Total: 3.177900 ms (FindLiveObjects: 0.126300 ms CreateObjectMapping: 0.033100 ms MarkObjects: 2.502400 ms  DeleteObjects: 0.515100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -194,666 +131,513 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 906.908333 seconds.
-  path: Assets/Environment/House/HouseTiles/HouseTilePalette/HouseTilePalette.prefab
-  artifactKey: Guid(c8f724f911ef464478846ab67134a137) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Environment/House/HouseTiles/HouseTilePalette/HouseTilePalette.prefab using Guid(c8f724f911ef464478846ab67134a137) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01e89a5c379eacc64a770dbb946db925') in 1.026344 seconds 
-  Import took 1.035499 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 185.617281 seconds.
-  path: Assets/Environment/House/3 Animated objects
-  artifactKey: Guid(517ac8a3dc5193643a8734877513a48a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Environment/House/3 Animated objects using Guid(517ac8a3dc5193643a8734877513a48a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2699007bd6d85f93fcc27edb28e03d8c') in 0.005905 seconds 
-  Import took 0.010282 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 158.824098 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/1 Smith
-  artifactKey: Guid(0d3496c20937e7a46a94858e07db3976) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/1 Smith using Guid(0d3496c20937e7a46a94858e07db3976) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '211154019278ea6bc7eae61974828644') in 0.006728 seconds 
-  Import took 0.009988 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.128107 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/1 Smith/Smith_attack.png
-  artifactKey: Guid(d293baba78333eb4186603c0b9cf8213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/1 Smith/Smith_attack.png using Guid(d293baba78333eb4186603c0b9cf8213) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1afffc55f87c041365a4945a9cb5c661') in 0.082385 seconds 
-  Import took 0.088059 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000307 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/1 Smith/Smith_sharpen.png
-  artifactKey: Guid(de836d0e39366f145bee756a07c85872) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/1 Smith/Smith_sharpen.png using Guid(de836d0e39366f145bee756a07c85872) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fbd2247f7c79dc99fccb664cb2c1f4d') in 0.024166 seconds 
-  Import took 0.027113 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000313 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/1 Smith/Smith_death.png
-  artifactKey: Guid(da76e8b907c6def49aa4fc5e1056f268) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/1 Smith/Smith_death.png using Guid(da76e8b907c6def49aa4fc5e1056f268) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da88fc1b17025f1cc540b523983864c1') in 0.021795 seconds 
-  Import took 0.024769 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000306 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/1 Smith/Smith_idle.png
-  artifactKey: Guid(67048b8fc2fe59046affdb6640f2b793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/1 Smith/Smith_idle.png using Guid(67048b8fc2fe59046affdb6640f2b793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e86b6942f423941e4377975cd8e26cf6') in 0.022784 seconds 
-  Import took 0.026655 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000281 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/1 Smith/Smith_walk.png
-  artifactKey: Guid(b27bf685c439d764c9be2ac1c6b2216b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/1 Smith/Smith_walk.png using Guid(b27bf685c439d764c9be2ac1c6b2216b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c92141c2e968a9c14fd0bf1c8dbbc826') in 0.020534 seconds 
-  Import took 0.023470 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000370 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/1 Smith/Smith_Sieve.png
-  artifactKey: Guid(82458384e27b2824a8519bde2ad93554) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/1 Smith/Smith_Sieve.png using Guid(82458384e27b2824a8519bde2ad93554) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6f949936567d2edd1ef3d6a43d4a8de') in 0.021618 seconds 
-  Import took 0.025050 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000300 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/1 Smith/Smith_hammer.png
-  artifactKey: Guid(4b79af12bbfb1a94289bd4f1fcda3035) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/1 Smith/Smith_hammer.png using Guid(4b79af12bbfb1a94289bd4f1fcda3035) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '859a39b521d659202c1fc6a0b7037b24') in 0.021015 seconds 
-  Import took 0.024113 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000346 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/1 Smith/Smith_hurt.png
-  artifactKey: Guid(bdd87fb043d09cf4e95a856c3f9f47f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/1 Smith/Smith_hurt.png using Guid(bdd87fb043d09cf4e95a856c3f9f47f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd8e5a7357a8e1302f10ec30cb23f05d9') in 0.022556 seconds 
-  Import took 0.025701 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.304673 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Anvil.png
-  artifactKey: Guid(b4d245da398fd854495e9ee29e5808b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Anvil.png using Guid(b4d245da398fd854495e9ee29e5808b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07557dedef52139a994cd9bc271776f5') in 0.018394 seconds 
-  Import took 0.022344 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000305 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/House_animation.png
-  artifactKey: Guid(364a79c1f8c25ac4d83629b7c4cd5b39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/House_animation.png using Guid(364a79c1f8c25ac4d83629b7c4cd5b39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e7b9eab78824a8729f6e8d3d9c9cf8c') in 0.022196 seconds 
-  Import took 0.025598 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000478 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Hammer_sparks.png
-  artifactKey: Guid(5626f9901ea94fd498f9963821573205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Hammer_sparks.png using Guid(5626f9901ea94fd498f9963821573205) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f56e47341fe2cccf3a6e7b09cf31bbec') in 0.022531 seconds 
-  Import took 0.025797 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000302 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Sword1.png
-  artifactKey: Guid(a6a4b93b7a941a5498850f3ce1276d8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Sword1.png using Guid(a6a4b93b7a941a5498850f3ce1276d8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04e77e856d9acfd47b79054565d0c5a9') in 0.023136 seconds 
-  Import took 0.025898 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000318 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Sharpen_sparks.png
-  artifactKey: Guid(a6ae11e0342d75b47b6b01878a311236) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Sharpen_sparks.png using Guid(a6ae11e0342d75b47b6b01878a311236) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63fae9777a2d4ee23755dc6d2486b270') in 0.021162 seconds 
-  Import took 0.024212 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000237 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Sword2.png
-  artifactKey: Guid(8d277c1cb90357d4b8239608b708ebef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Sword2.png using Guid(8d277c1cb90357d4b8239608b708ebef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e357beabed305af382a74852886fd02') in 0.022149 seconds 
-  Import took 0.026149 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000298 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Barrel.png
-  artifactKey: Guid(b4f659485e2890d49bcee86cf7cd9732) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Barrel.png using Guid(b4f659485e2890d49bcee86cf7cd9732) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e36f41d8f718fbc88feee26ea2f2c2e8') in 0.027603 seconds 
-  Import took 0.031109 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000314 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Spear.png
-  artifactKey: Guid(e9f41a43aa2d8a1469bbcd05993ebcbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Spear.png using Guid(e9f41a43aa2d8a1469bbcd05993ebcbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5dda94a7f91bc872965841c09acc62c5') in 0.022906 seconds 
-  Import took 0.026517 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000243 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Smoke.png
-  artifactKey: Guid(218eaa4e95f2c66438dd334d2dc0aa7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Smoke.png using Guid(218eaa4e95f2c66438dd334d2dc0aa7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1325ed1082a628689eeeea96b7a6c34a') in 0.018696 seconds 
-  Import took 0.022275 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000223 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Rack.png
-  artifactKey: Guid(c75382105a1e34f46ba71ec445f7a2d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Rack.png using Guid(c75382105a1e34f46ba71ec445f7a2d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '923272ea8c09bfe03ea410ce9659c813') in 0.020322 seconds 
-  Import took 0.023673 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000216 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Shield.png
-  artifactKey: Guid(3ab0472a8cd35fd4a90706351dfafcf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Shield.png using Guid(3ab0472a8cd35fd4a90706351dfafcf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecf24afa74e56bd2224d67d15dc83f33') in 0.019357 seconds 
-  Import took 0.022364 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000212 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Forge_animation.png
-  artifactKey: Guid(bb51600e9084b9d43a5b276fc099fd2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Forge_animation.png using Guid(bb51600e9084b9d43a5b276fc099fd2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7f3cecccbbe4c4abcfaeba3e9c70d5d') in 0.021620 seconds 
-  Import took 0.024631 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000212 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Sieve.png
-  artifactKey: Guid(bb6f6e7885ee861459e1e90c6e1aa315) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Sieve.png using Guid(bb6f6e7885ee861459e1e90c6e1aa315) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '083022a357aef07078ab522fc08399e7') in 0.019279 seconds 
-  Import took 0.022197 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000205 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Chain1.png
-  artifactKey: Guid(05c8fb2227133314f80effc59a6539d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Chain1.png using Guid(05c8fb2227133314f80effc59a6539d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63d8a2369d85bf5814a1948ef740f4af') in 0.020131 seconds 
-  Import took 0.023069 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Chain2.png
-  artifactKey: Guid(d58d2df60fc1b3040ba5faffdd8133ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Chain2.png using Guid(d58d2df60fc1b3040ba5faffdd8133ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '469d0df67643b0613c425163aa294b39') in 0.018715 seconds 
-  Import took 0.021721 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000200 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Forge.png
-  artifactKey: Guid(7081c4f98ca23f74d9a6be2e3dc07c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Forge.png using Guid(7081c4f98ca23f74d9a6be2e3dc07c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff6380d48a8a42bd683771a777f28758') in 0.019602 seconds 
-  Import took 0.022584 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000196 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Chain3.png
-  artifactKey: Guid(0653fd8e76c35cc40a0fd2132fd4d993) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Chain3.png using Guid(0653fd8e76c35cc40a0fd2132fd4d993) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2497065eaef9fcc91ff2edb5b92d783') in 0.019038 seconds 
-  Import took 0.021970 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000210 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Halberd.png
-  artifactKey: Guid(ea2f0b699c2f73f4ab7c19e2d876bfd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Halberd.png using Guid(ea2f0b699c2f73f4ab7c19e2d876bfd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c4c06f647087cbc20bd2764f6762e6d') in 0.020084 seconds 
-  Import took 0.023440 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000195 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/House.png
-  artifactKey: Guid(ad3b14548cd0fed4f8a30c0f5059e018) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/House.png using Guid(ad3b14548cd0fed4f8a30c0f5059e018) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ccf7ed51eed6a17ab1147cbaffb321d') in 0.019359 seconds 
-  Import took 0.022260 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Grinding_wheel.png
-  artifactKey: Guid(54047c189197d9d44b751fc5c6f1fe15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Grinding_wheel.png using Guid(54047c189197d9d44b751fc5c6f1fe15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3756f12a0d82a41c659acec391338857') in 0.018141 seconds 
-  Import took 0.021160 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000208 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Axe.png
-  artifactKey: Guid(4857243342987584cb0a0889815e038e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/2 Objects/Axe.png using Guid(4857243342987584cb0a0889815e038e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2efa9c0b1043ab1c390105d871c50b94') in 0.020557 seconds 
-  Import took 0.023576 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4271.721133 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/3 Character animation/GraveRobber_hammer.png
-  artifactKey: Guid(89df34a8025dca74390e2639706824e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/3 Character animation/GraveRobber_hammer.png using Guid(89df34a8025dca74390e2639706824e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '143a1c31c8dc037f2af614d66a1b2a23') in 0.025844 seconds 
-  Import took 0.030951 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000286 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/3 Character animation/Woodcutter_hammer.png
-  artifactKey: Guid(8ca823aa00d4e644ba74b375a1e67a65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/3 Character animation/Woodcutter_hammer.png using Guid(8ca823aa00d4e644ba74b375a1e67a65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8aef7ee3b8a06afbe1ef7e045a6a662') in 0.026617 seconds 
-  Import took 0.029941 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000287 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/3 Character animation/Woodcutter_Sieve.png
-  artifactKey: Guid(97a3ba9c1d58d7146acb8ac30cf35a79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/3 Character animation/Woodcutter_Sieve.png using Guid(97a3ba9c1d58d7146acb8ac30cf35a79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4d7cf2fef558bedf85a3aa84a7345031') in 0.022717 seconds 
-  Import took 0.026594 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000300 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/3 Character animation/Woodcutter_sharpen.png
-  artifactKey: Guid(af8faed212fbbc64693caf6e94d9c095) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/3 Character animation/Woodcutter_sharpen.png using Guid(af8faed212fbbc64693caf6e94d9c095) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '315fb9c9cb502a9df8c09624ecd46903') in 0.019579 seconds 
-  Import took 0.023137 seconds .
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects
+  artifactKey: Guid(3ec8644dadbf30b4aa05990e0f1d4f94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects using Guid(3ec8644dadbf30b4aa05990e0f1d4f94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8518dc63f578cc99dba6c2480c21fd9a') in 0.007900 seconds 
+  Import took 0.010436 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000277 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/3 Character animation/SteamMan_hammer.png
-  artifactKey: Guid(df4cfc9791ebe684b81ee5e959b5185a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/3 Character animation/SteamMan_hammer.png using Guid(df4cfc9791ebe684b81ee5e959b5185a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b93d7f44f555b25475ea45e5948bee5c') in 0.021774 seconds 
-  Import took 0.025811 seconds .
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/1 Boxes/4.png
+  artifactKey: Guid(61a0b6b72ae874c4f8264706ca7a4480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/1 Boxes/4.png using Guid(61a0b6b72ae874c4f8264706ca7a4480) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da5f8716fa996b6c7dd2470a1b18b959') in 0.148924 seconds 
+  Import took 0.152349 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000414 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/3 Character animation/GraveRobber_Sieve.png
-  artifactKey: Guid(4f31035bac2c72e4ca3621ec35cea7bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/3 Character animation/GraveRobber_Sieve.png using Guid(4f31035bac2c72e4ca3621ec35cea7bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8b311cedd034f2ddff194b01bdaef46') in 0.020059 seconds 
-  Import took 0.024112 seconds .
+  Time since last request: 0.000213 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/2 Trees/1.png
+  artifactKey: Guid(bb441877ccf0ea2468e76f4677abd2fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/2 Trees/1.png using Guid(bb441877ccf0ea2468e76f4677abd2fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ffafed052b194c70c4e0d3f893aa7e1c') in 0.021607 seconds 
+  Import took 0.024101 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000275 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/3 Character animation/GraveRobber_sharpen.png
-  artifactKey: Guid(3073224f5a2fcd14da416dfa2a6024e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/3 Character animation/GraveRobber_sharpen.png using Guid(3073224f5a2fcd14da416dfa2a6024e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc340dc574d6d885d2fb48b70d3709f9') in 0.021296 seconds 
-  Import took 0.025364 seconds .
+  Time since last request: 0.000327 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/3 Man
+  artifactKey: Guid(98e616f186791a1428d3cb0870327965) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/3 Man using Guid(98e616f186791a1428d3cb0870327965) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4670a29793011a99e5e1782f94308fb2') in 0.006443 seconds 
+  Import took 0.009500 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000408 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/3 Character animation/SteamMan_Sieve.png
-  artifactKey: Guid(03504be2e88ea0f43913b2a3de2baf48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/3 Character animation/SteamMan_Sieve.png using Guid(03504be2e88ea0f43913b2a3de2baf48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8de96776c4ce7d3b2d7cd752280d8a7') in 0.021113 seconds 
-  Import took 0.024581 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000274 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/3 Character animation/SteamMan_sharpen.png
-  artifactKey: Guid(8cc5cafd7efb5664180bc7af42e2a127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/3 Character animation/SteamMan_sharpen.png using Guid(8cc5cafd7efb5664180bc7af42e2a127) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '522aeeea244bf71e7523c3bbde79f6ce') in 0.019468 seconds 
-  Import took 0.022875 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.663226 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_01.gif
-  artifactKey: Guid(caf513ef134ce3542b95aa1700183978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_01.gif using Guid(caf513ef134ce3542b95aa1700183978) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc7a620fd39c592b4c3b937d9bcc1a07') in 0.021830 seconds 
-  Import took 0.025875 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000405 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_10.gif
-  artifactKey: Guid(1c69e1740158ae84abd3fdf71e640a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_10.gif using Guid(1c69e1740158ae84abd3fdf71e640a0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83485847567f5cfaa1b42dc049b20b1f') in 0.021656 seconds 
-  Import took 0.025303 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000408 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_14.gif
-  artifactKey: Guid(a51430f0b6ed99c438da18fba3eb5348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_14.gif using Guid(a51430f0b6ed99c438da18fba3eb5348) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1200e0efb168e9ca290a6e280f38f72a') in 0.021378 seconds 
-  Import took 0.026473 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000384 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_16.gif
-  artifactKey: Guid(eaf4369ae4e02384f932b2b8f2c33878) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_16.gif using Guid(eaf4369ae4e02384f932b2b8f2c33878) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82d65416461b9b88c28e77a41370a2f9') in 0.021025 seconds 
-  Import took 0.025520 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000339 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_02.gif
-  artifactKey: Guid(fe2bf24ada97cfb43b371b3a8f5faf3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_02.gif using Guid(fe2bf24ada97cfb43b371b3a8f5faf3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fd56172564a2be0169a139095e1ce56') in 0.018913 seconds 
-  Import took 0.022427 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000855 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_15.gif
-  artifactKey: Guid(cca5e2d4e708a0740a1cb0e8380e064c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_15.gif using Guid(cca5e2d4e708a0740a1cb0e8380e064c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a507378cb245fc6ea35519d0d0f5a48') in 0.017828 seconds 
-  Import took 0.022009 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000204 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_20.gif
-  artifactKey: Guid(bd1a49bb6c468744d8c78e6e00f6ab36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_20.gif using Guid(bd1a49bb6c468744d8c78e6e00f6ab36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '46dde06bae5740833c1b6bfdeb131674') in 0.018377 seconds 
-  Import took 0.022066 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000254 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_09.gif
-  artifactKey: Guid(6a224cfe6568de3488a18d0f1654d432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_09.gif using Guid(6a224cfe6568de3488a18d0f1654d432) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1416eb490696943c9f1305413fc7e05f') in 0.018633 seconds 
-  Import took 0.022498 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000234 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_19.gif
-  artifactKey: Guid(8d4a87364a49ba140913322e15c17ec3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_19.gif using Guid(8d4a87364a49ba140913322e15c17ec3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '700b620ebead04e27d64927d0ed9c73c') in 0.018611 seconds 
-  Import took 0.022807 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000234 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_13.gif
-  artifactKey: Guid(526325ddef279664c932204c83bf2ff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_13.gif using Guid(526325ddef279664c932204c83bf2ff4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd9bbb0f53cff10aec4b5289ce2f0e4d3') in 0.017966 seconds 
-  Import took 0.022574 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000216 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_07.gif
-  artifactKey: Guid(c904c064f5791c8479ccf2106abfcb7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_07.gif using Guid(c904c064f5791c8479ccf2106abfcb7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19cbabd326643241d37b5ca8b320a7ea') in 0.017842 seconds 
-  Import took 0.023049 seconds .
+  Time since last request: 0.000301 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/3 Man/Man.png
+  artifactKey: Guid(e1bdb6f06d6e0af4b82148c24bf238bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/3 Man/Man.png using Guid(e1bdb6f06d6e0af4b82148c24bf238bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd79e46e2db3ea4470169d9330399ca18') in 0.015306 seconds 
+  Import took 0.018433 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000199 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_17.gif
-  artifactKey: Guid(c3a0371d174239145836d94ace279d96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_17.gif using Guid(c3a0371d174239145836d94ace279d96) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05934b0215a02fdda16196da3fc52752') in 0.017603 seconds 
-  Import took 0.023015 seconds .
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/3 Bushes/1.png
+  artifactKey: Guid(e0512a9904e12fa4d86700df49cc3369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/3 Bushes/1.png using Guid(e0512a9904e12fa4d86700df49cc3369) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4ecf9a642aca9d04b2acc9806992ee8') in 0.017738 seconds 
+  Import took 0.021289 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000158 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/1 Boxes/6.png
+  artifactKey: Guid(038fe09029caf3a4fab20d5683fff71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/1 Boxes/6.png using Guid(038fe09029caf3a4fab20d5683fff71f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26d3daa8e8dbe0726124a498fbfb3cfb') in 0.017014 seconds 
+  Import took 0.019450 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/3 Bushes/2.png
+  artifactKey: Guid(83791a1be5ca527479f2fa91d8abdf39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/3 Bushes/2.png using Guid(83791a1be5ca527479f2fa91d8abdf39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45ca7d8aa56842b22177cf26e8932d5f') in 0.017574 seconds 
+  Import took 0.020512 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000382 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/2 Trees/2.png
+  artifactKey: Guid(1bc76fcb746160941bdeb41caa8adb4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/2 Trees/2.png using Guid(1bc76fcb746160941bdeb41caa8adb4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef61e9ef98554b2c5b74b75a5d674708') in 0.020489 seconds 
+  Import took 0.023229 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000410 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/2 Trees/4.png
+  artifactKey: Guid(740d0637398794d409b66c30d0632390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/2 Trees/4.png using Guid(740d0637398794d409b66c30d0632390) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1721c29d366a3f85bc5079d2d30b0c01') in 0.018988 seconds 
+  Import took 0.022302 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000314 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/3 Man/Man_death.png
+  artifactKey: Guid(47e81ce6c80f0f342a5e8f6ca528b0d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/3 Man/Man_death.png using Guid(47e81ce6c80f0f342a5e8f6ca528b0d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ae63d60f8abe1fb5493b2bc515f1ade') in 0.020528 seconds 
+  Import took 0.023124 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000345 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/3 Man/Man_attack.png
+  artifactKey: Guid(ba14c9c6aa048fa4387f6c0a8914ec20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/3 Man/Man_attack.png using Guid(ba14c9c6aa048fa4387f6c0a8914ec20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9558d51ce89936e3e17d99370ad87a25') in 0.019380 seconds 
+  Import took 0.022601 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000322 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/1 Boxes/5.png
+  artifactKey: Guid(56f2a557231935a44ba77c8961d9032c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/1 Boxes/5.png using Guid(56f2a557231935a44ba77c8961d9032c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c12fb44528f40e9c0df9533b57adc6d') in 0.019394 seconds 
+  Import took 0.022599 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/3 Bushes/5.png
+  artifactKey: Guid(a271351d664837d4dac5c78095ba2920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/3 Bushes/5.png using Guid(a271351d664837d4dac5c78095ba2920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fb29423f868fa60d35409f86162dfd3') in 0.018836 seconds 
+  Import took 0.021544 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000352 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/2 Trees/3.png
+  artifactKey: Guid(25826c7f5b7808f4c8ce402a4517778a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/2 Trees/3.png using Guid(25826c7f5b7808f4c8ce402a4517778a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1b08c47bee6228caaca1c5d6c666a1e7') in 0.018741 seconds 
+  Import took 0.021194 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000235 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_03.gif
-  artifactKey: Guid(11ced487dc01c3e44ba8a57b8e29eb47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_03.gif using Guid(11ced487dc01c3e44ba8a57b8e29eb47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e99528242db726cb474371772f27b248') in 0.016735 seconds 
-  Import took 0.020286 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000218 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_05.png
-  artifactKey: Guid(b675e734d4d68424894960d2504e8832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_05.png using Guid(b675e734d4d68424894960d2504e8832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a41ae2e384f7625cce411dafa3771025') in 0.019705 seconds 
-  Import took 0.024147 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000258 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_18.gif
-  artifactKey: Guid(9b4501712ccd6a245b1553cf616a3a78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_18.gif using Guid(9b4501712ccd6a245b1553cf616a3a78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a8eb3573dda4a641e754a5d4806ff70') in 0.016085 seconds 
-  Import took 0.020819 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000212 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_06.gif
-  artifactKey: Guid(098c9819dddc91c4f8c9596daa236734) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_06.gif using Guid(098c9819dddc91c4f8c9596daa236734) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71eac687192458982644dbbdda3b1a0a') in 0.017692 seconds 
-  Import took 0.021187 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000287 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_08.gif
-  artifactKey: Guid(074a3624f59299441bdeb9d3fd07cb6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_08.gif using Guid(074a3624f59299441bdeb9d3fd07cb6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c05035402de658581f4024043e546476') in 0.018920 seconds 
-  Import took 0.022812 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000127 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_04.gif
-  artifactKey: Guid(00d3d6b73a82de8469ff5b1859490329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_04.gif using Guid(00d3d6b73a82de8469ff5b1859490329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd5c8f745aff04fd1c43d0e5054f543e') in 0.017085 seconds 
-  Import took 0.021732 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000208 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_11.gif
-  artifactKey: Guid(5c717cac873969c45b03b128d38cb8fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_11.gif using Guid(5c717cac873969c45b03b128d38cb8fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26dbdaaa5d880c03c75070999e1c1312') in 0.018178 seconds 
-  Import took 0.022498 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000069 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_12.gif
-  artifactKey: Guid(d92aab5d424328643990d9d5ef30b9c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/4 Icons/Icon_12.gif using Guid(d92aab5d424328643990d9d5ef30b9c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0d49f204291287633e672487ec161fd') in 0.016562 seconds 
-  Import took 0.020593 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.593378 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/PSD/Character_animation.psd
-  artifactKey: Guid(92ccf07e3970b8d48a4d2ae59a618503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/PSD/Character_animation.psd using Guid(92ccf07e3970b8d48a4d2ae59a618503) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e604f94559fa1864b54616d5fb693f71') in 0.022198 seconds 
-  Import took 0.026969 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000417 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/PSD/Objects.psd
-  artifactKey: Guid(fa0479b9738d7594e86fdd9103940f20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/PSD/Objects.psd using Guid(fa0479b9738d7594e86fdd9103940f20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85ad9fb0c66ba85dd85df4879d020988') in 0.021657 seconds 
-  Import took 0.025306 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000307 seconds.
-  path: Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/PSD/Icons.psd
-  artifactKey: Guid(806c8d653778f3a48b0185105f786721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-981000-blacksmith-craft-asset-pixel-art-pack/PSD/Icons.psd using Guid(806c8d653778f3a48b0185105f786721) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b3e951e02a37ea946a5a94d712ff5f3') in 0.027907 seconds 
-  Import took 0.031992 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 28.587563 seconds.
-  path: Assets/Environment/BlackSmith
-  artifactKey: Guid(cde07468f7e8f6146bdd9644cb1acdcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Environment/BlackSmith using Guid(cde07468f7e8f6146bdd9644cb1acdcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0acc4265079b3ea4642393a5b8a29b0') in 0.008614 seconds 
-  Import took 0.012472 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 30.032555 seconds.
-  path: Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/1 Cook
-  artifactKey: Guid(2bf0d5abd705f5b42bb245b5e7728e60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/1 Cook using Guid(2bf0d5abd705f5b42bb245b5e7728e60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccade8d857c3dcde9b0e2f5eefd57cbb') in 0.006560 seconds 
-  Import took 0.011770 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.074595 seconds.
-  path: Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/1 Cook/Cook_add.png
-  artifactKey: Guid(63db425034ec1df42ad2905f03e90a00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/1 Cook/Cook_add.png using Guid(63db425034ec1df42ad2905f03e90a00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5e3981204d70bf8dd219dff43e2cef6') in 0.027343 seconds 
-  Import took 0.033143 seconds .
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/3 Man/Man_idle.png
+  artifactKey: Guid(f139f40cb20616d4490c9e555501638c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/3 Man/Man_idle.png using Guid(f139f40cb20616d4490c9e555501638c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c73068ca452c2f81a82dd3c0cf864fd') in 0.019207 seconds 
+  Import took 0.021747 seconds .
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000341 seconds.
-  path: Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/1 Cook/Cook_death.png
-  artifactKey: Guid(2f6e2965953066e4a957556af3bf7cba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/1 Cook/Cook_death.png using Guid(2f6e2965953066e4a957556af3bf7cba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1eca075cdd2fbaf5bde47ed31f647fda') in 0.024359 seconds 
-  Import took 0.028416 seconds .
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/3 Man/Man_walk.png
+  artifactKey: Guid(cf47664af4ae26744ba85152bf8d0a77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/3 Man/Man_walk.png using Guid(cf47664af4ae26744ba85152bf8d0a77) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2529d6d4bdcd3980c64f7b5266debfb7') in 0.018497 seconds 
+  Import took 0.021506 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000335 seconds.
-  path: Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/1 Cook/Cook_idle.png
-  artifactKey: Guid(9edeb16e0879fdb458f82de2a63660dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/1 Cook/Cook_idle.png using Guid(9edeb16e0879fdb458f82de2a63660dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bd11a1f6478abf301772ebe00fdd09d') in 0.023279 seconds 
-  Import took 0.027186 seconds .
+  Time since last request: 0.000206 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/3 Bushes/6.png
+  artifactKey: Guid(9f30b7b2c02168544956bb2d5bff8ae4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/3 Bushes/6.png using Guid(9f30b7b2c02168544956bb2d5bff8ae4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4fee0bf3eb310ff315421432254a6a8') in 0.018183 seconds 
+  Import took 0.020757 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000337 seconds.
-  path: Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/1 Cook/Cook_attack.png
-  artifactKey: Guid(28fad29d5ec593c49a19fc4d4bdf16f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/1 Cook/Cook_attack.png using Guid(28fad29d5ec593c49a19fc4d4bdf16f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be43ad863bc9ec48898fbf1c22a13787') in 0.022719 seconds 
-  Import took 0.026375 seconds .
+  Time since last request: 0.000349 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/1 Boxes/1.png
+  artifactKey: Guid(754c8ce0f0c50b64b9be740893e7be56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/1 Boxes/1.png using Guid(754c8ce0f0c50b64b9be740893e7be56) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '014a8cfb6ec233eb9a9dce8b0402e148') in 0.017233 seconds 
+  Import took 0.020065 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000363 seconds.
-  path: Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/1 Cook/Cook_walk.png
-  artifactKey: Guid(5921933f6eca27245a7c2f92a6d263f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/1 Cook/Cook_walk.png using Guid(5921933f6eca27245a7c2f92a6d263f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6cbee5201400e82dd4324b57de65791') in 0.020540 seconds 
-  Import took 0.024428 seconds .
+  Time since last request: 0.000371 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/2 Trees/5.png
+  artifactKey: Guid(fbd163306c85fed44922946b732b2adc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/2 Trees/5.png using Guid(fbd163306c85fed44922946b732b2adc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1110e89dc24719cf13a5c0eb038c3499') in 0.022968 seconds 
+  Import took 0.025520 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000305 seconds.
-  path: Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/1 Cook/Cook_eat.png
-  artifactKey: Guid(182ae6e2935d38a4982dd81f95623d1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/1 Cook/Cook_eat.png using Guid(182ae6e2935d38a4982dd81f95623d1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ea2713d88583109354f7694cdafb279') in 0.021796 seconds 
-  Import took 0.025010 seconds .
+  Time since last request: 0.000292 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/2 Trees/6.png
+  artifactKey: Guid(1adb1fa72f4fc62489caa02f8dc08ea6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/2 Trees/6.png using Guid(1adb1fa72f4fc62489caa02f8dc08ea6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7998ef3a4ccaf74a05bfe67ce413f652') in 0.017100 seconds 
+  Import took 0.020023 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000278 seconds.
-  path: Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/1 Cook/Cook_stir.png
-  artifactKey: Guid(6bfe79dfbd8c087498e0f3db73212767) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/1 Cook/Cook_stir.png using Guid(6bfe79dfbd8c087498e0f3db73212767) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '674900ac02a58f1394ba145bd19063c3') in 0.020845 seconds 
-  Import took 0.024346 seconds .
+  Time since last request: 0.000205 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/3 Bushes/3.png
+  artifactKey: Guid(8b60d53fa82a310498555b07f861bf6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/3 Bushes/3.png using Guid(8b60d53fa82a310498555b07f861bf6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7cb8292ad7cfe480048cbbad753bb98') in 0.017426 seconds 
+  Import took 0.020527 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000351 seconds.
-  path: Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/1 Cook/Cook_hurt.png
-  artifactKey: Guid(0e6350d11f0c7e84495d29f21eb011d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/1 Cook/Cook_hurt.png using Guid(0e6350d11f0c7e84495d29f21eb011d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '685906b56f7fa4afb63a0d59223efe26') in 0.020739 seconds 
-  Import took 0.024879 seconds .
+  Time since last request: 0.000158 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/3 Man/Man_hurt.png
+  artifactKey: Guid(57dad8c2d53136a4b8e749b1a0e30ab7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/3 Man/Man_hurt.png using Guid(57dad8c2d53136a4b8e749b1a0e30ab7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3d612fd67e2dbbe93d40530b7cb0ef0') in 0.016200 seconds 
+  Import took 0.018792 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.242064 seconds.
-  path: Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/2 Character animation/GraveRobber_add.png
-  artifactKey: Guid(71904f83625051b4fa404a500f5fe532) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/2 Character animation/GraveRobber_add.png using Guid(71904f83625051b4fa404a500f5fe532) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c2bb6bf58ce70dfb7d5eff36c9d94da') in 0.017122 seconds 
-  Import took 0.021367 seconds .
+  Time since last request: 0.000283 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/3 Bushes/4.png
+  artifactKey: Guid(b669d01ebca4c704fb022cec16c9a0cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/3 Bushes/4.png using Guid(b669d01ebca4c704fb022cec16c9a0cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4ce407ce06916b22efcb074cf9a6126') in 0.017217 seconds 
+  Import took 0.020348 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000316 seconds.
-  path: Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/2 Character animation/SteamMan_eat.png
-  artifactKey: Guid(7832e6427af39e64d9abe17379a375b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/2 Character animation/SteamMan_eat.png using Guid(7832e6427af39e64d9abe17379a375b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b5d89f1d7818696a83921d41b5fd207') in 0.020597 seconds 
-  Import took 0.023866 seconds .
+  Time since last request: 0.000261 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/1 Boxes/3.png
+  artifactKey: Guid(b8a0edca5448494408569aa36ba0396d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/1 Boxes/3.png using Guid(b8a0edca5448494408569aa36ba0396d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdb264ea9318a4b33dfc62bb20467bf1') in 0.016720 seconds 
+  Import took 0.019296 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000287 seconds.
-  path: Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/2 Character animation/GraveRobber_stir.png
-  artifactKey: Guid(f898cee0e48a77e4b99e0f0094687b5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/2 Character animation/GraveRobber_stir.png using Guid(f898cee0e48a77e4b99e0f0094687b5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2bae3713c806d2e00a22b88bd86357d7') in 0.022732 seconds 
-  Import took 0.026995 seconds .
+  Time since last request: 0.000274 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/1 Boxes/2.png
+  artifactKey: Guid(79469a4754c17614a90891c61e4f3810) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/1 Boxes/2.png using Guid(79469a4754c17614a90891c61e4f3810) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c88b7abba7e26e75f958c26bc757dae9') in 0.017836 seconds 
+  Import took 0.020482 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000297 seconds.
-  path: Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/2 Character animation/Woodcutter_eat.png
-  artifactKey: Guid(dedcb618aefdb5a4a8a0158a19df5af3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/2 Character animation/Woodcutter_eat.png using Guid(dedcb618aefdb5a4a8a0158a19df5af3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8719268a462d8fb87ec70dc31253ec7') in 0.022691 seconds 
-  Import took 0.026317 seconds .
+  Time since last request: 0.770562 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/5 Boy/Boy.png
+  artifactKey: Guid(ad1f27523f7667f41920231362fc46d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/5 Boy/Boy.png using Guid(ad1f27523f7667f41920231362fc46d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '489313b642b6319a610b82358eff76bd') in 0.015185 seconds 
+  Import took 0.018563 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000309 seconds.
-  path: Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/2 Character animation/GraveRobber_eat.png
-  artifactKey: Guid(523830f7e364a6a43893b3f29c535fb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/2 Character animation/GraveRobber_eat.png using Guid(523830f7e364a6a43893b3f29c535fb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '73b91f732590187c482bc26b9a571a36') in 0.020466 seconds 
-  Import took 0.023837 seconds .
+  Time since last request: 0.000205 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/5 Boy/Boy_walk.png
+  artifactKey: Guid(c21e6d649cfafc24a8f401a451af1eac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/5 Boy/Boy_walk.png using Guid(c21e6d649cfafc24a8f401a451af1eac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '750f05cd05f2f5b2923b153609107163') in 0.020382 seconds 
+  Import took 0.023097 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000281 seconds.
-  path: Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/2 Character animation/SteamMan_stir.png
-  artifactKey: Guid(dd94e2b8f184287468c6b74227c6a4dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/2 Character animation/SteamMan_stir.png using Guid(dd94e2b8f184287468c6b74227c6a4dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a61e32e84d56b54526a0ee18bd30e07') in 0.020134 seconds 
-  Import took 0.024817 seconds .
+  Time since last request: 0.000206 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/5 Boy/Boy_hurt.png
+  artifactKey: Guid(957ebe29f62e6c84fad2519ddf5f0aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/5 Boy/Boy_hurt.png using Guid(957ebe29f62e6c84fad2519ddf5f0aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8770f285da42c384b98c63d20b5b28fc') in 0.018901 seconds 
+  Import took 0.022532 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000377 seconds.
-  path: Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/2 Character animation/Woodcutter_stir.png
-  artifactKey: Guid(fa451ca3e5e7c754aa6051c0119e467b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/2 Character animation/Woodcutter_stir.png using Guid(fa451ca3e5e7c754aa6051c0119e467b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '053b2babba7fbef79775055b879fe402') in 0.019973 seconds 
-  Import took 0.023100 seconds .
+  Time since last request: 0.000280 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/5 Boy/Boy_idle.png
+  artifactKey: Guid(0aaa17310ecdd0c418356e2692e4b619) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/5 Boy/Boy_idle.png using Guid(0aaa17310ecdd0c418356e2692e4b619) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b9aa96582f94be93ab9451209084ec3') in 0.018585 seconds 
+  Import took 0.021359 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000276 seconds.
-  path: Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/2 Character animation/SteamMan_add.png
-  artifactKey: Guid(567d249942ce56742975d1c5aa4e30dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/2 Character animation/SteamMan_add.png using Guid(567d249942ce56742975d1c5aa4e30dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f9fa8458b7a044c79123bb0ce3d82ff') in 0.021040 seconds 
-  Import took 0.025120 seconds .
+  Time since last request: 0.000174 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/5 Boy/Boy_death.png
+  artifactKey: Guid(2ad5cc765bd1f474abadaedef8304b20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/5 Boy/Boy_death.png using Guid(2ad5cc765bd1f474abadaedef8304b20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2be9905b849cc282e10d46041d84a06') in 0.019235 seconds 
+  Import took 0.022481 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000263 seconds.
-  path: Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/2 Character animation/Woodcutter_add.png
-  artifactKey: Guid(05b659976969b77499b18bea6d5a131b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Craftpix/craftpix-785613-cookery-game-assets-pixel-art-pack/2 Character animation/Woodcutter_add.png using Guid(05b659976969b77499b18bea6d5a131b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2df401d97795a8d2086ef0e84d2968b') in 0.019613 seconds 
-  Import took 0.023392 seconds .
+  Time since last request: 0.000324 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/5 Boy/Boy_attack.png
+  artifactKey: Guid(e0212d7ad7b6518459fa574894861002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/5 Boy/Boy_attack.png using Guid(e0212d7ad7b6518459fa574894861002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '57cc9866f872821fa8f9df73037cdccc') in 0.018755 seconds 
+  Import took 0.021504 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.527695 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/6 Girl/Girl.png
+  artifactKey: Guid(59531d0fb5ee36a46aff902752cab4ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/6 Girl/Girl.png using Guid(59531d0fb5ee36a46aff902752cab4ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a571852f4786e741909af1df8d40086e') in 0.016436 seconds 
+  Import took 0.019708 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/6 Girl/Girl_hurt.png
+  artifactKey: Guid(8dd75829a3ba49348a81f20b90c759ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/6 Girl/Girl_hurt.png using Guid(8dd75829a3ba49348a81f20b90c759ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '540c287e4cc724fbc67fe437563108bd') in 0.018541 seconds 
+  Import took 0.021324 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/6 Girl/Girl_idle.png
+  artifactKey: Guid(0eb4fa023e2f74742833d2275b8a563d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/6 Girl/Girl_idle.png using Guid(0eb4fa023e2f74742833d2275b8a563d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18f19eb3a75b52d9faba0ee94701dff6') in 0.020615 seconds 
+  Import took 0.024109 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000210 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/6 Girl/Girl_attack.png
+  artifactKey: Guid(0a43470d98b4b194689012244e821e91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/6 Girl/Girl_attack.png using Guid(0a43470d98b4b194689012244e821e91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1d8c209b97a882a677d258ecaaa3889') in 0.017170 seconds 
+  Import took 0.020685 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000283 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/6 Girl/Girl_death.png
+  artifactKey: Guid(14d23717868542f4e821d6760515d443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/6 Girl/Girl_death.png using Guid(14d23717868542f4e821d6760515d443) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '570e280f13d8a3ab059e490b2c2f3485') in 0.019944 seconds 
+  Import took 0.022816 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000320 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/6 Girl/Girl_walk.png
+  artifactKey: Guid(565cbd92577ff2f4ebe86d5593fd762f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/6 Girl/Girl_walk.png using Guid(565cbd92577ff2f4ebe86d5593fd762f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba663324124b3a943f4e6cc962fb4189') in 0.016906 seconds 
+  Import took 0.020269 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.427443 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/6 Girl/Materials
+  artifactKey: Guid(0dae258c41481864387d147a72a6abd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/6 Girl/Materials using Guid(0dae258c41481864387d147a72a6abd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b69fd1307cf8207b3ec0067ff1df886a') in 0.006450 seconds 
+  Import took 0.009463 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.079168 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/6 Girl/Materials/Girl.mat
+  artifactKey: Guid(fdd503b6c07bc5446b07ebf5925060e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/6 Girl/Materials/Girl.mat using Guid(fdd503b6c07bc5446b07ebf5925060e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a8f28a409b5c9d6ef9adb384b7ce138') in 0.038806 seconds 
+  Import took 0.043161 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003318 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.733 seconds
+Domain Reload Profiling:
+	ReloadAssembly (733ms)
+		BeginReloadAssembly (84ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (30ms)
+		EndReloadAssembly (606ms)
+			LoadAssemblies (59ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (215ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (30ms)
+			SetupLoadedEditorAssemblies (230ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (0ms)
+				BeforeProcessingInitializeOnLoad (42ms)
+				ProcessInitializeOnLoadAttributes (171ms)
+				ProcessInitializeOnLoadMethodAttributes (9ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.57 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2011 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.0 MB.
+System memory in use after: 90.1 MB.
+
+Unloading 45 unused Assets to reduce memory usage. Loaded Objects now: 2492.
+Total: 3.044100 ms (FindLiveObjects: 0.138800 ms CreateObjectMapping: 0.033700 ms MarkObjects: 2.327900 ms  DeleteObjects: 0.533400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 5939.888982 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/5 Boy/Boy_idle.png
+  artifactKey: Guid(0aaa17310ecdd0c418356e2692e4b619) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/5 Boy/Boy_idle.png using Guid(0aaa17310ecdd0c418356e2692e4b619) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee0946a517c554ffe01c910f956cfcbc') in 0.027131 seconds 
+  Import took 0.029990 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.991403 seconds.
+  path: Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/5 Boy/Boy_idle.png
+  artifactKey: Guid(0aaa17310ecdd0c418356e2692e4b619) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781111-free-villagers-sprite-sheets-pixel-art/5 Boy/Boy_idle.png using Guid(0aaa17310ecdd0c418356e2692e4b619) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f94c5942cad319b9bdf2a209d4e1d0e') in 0.027536 seconds 
+  Import took 0.031156 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 442.032925 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(3275a72dee34e4fb180df0447d416a17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(3275a72dee34e4fb180df0447d416a17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0251dce47f049bacd4bdf921a9bc19d7') in 0.006045 seconds 
+  Import took 0.010433 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.123676 seconds.
+  path: Assets/Scripts/GameManager.cs
+  artifactKey: Guid(e65b5db4f57aeb843976a8bbb122446b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameManager.cs using Guid(e65b5db4f57aeb843976a8bbb122446b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3807f0404e83947cddf25046fe870e1') in 0.017961 seconds 
+  Import took 0.021157 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005599 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.940 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1941ms)
+		BeginReloadAssembly (193ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (11ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (62ms)
+		EndReloadAssembly (1623ms)
+			LoadAssemblies (151ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (566ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (85ms)
+			SetupLoadedEditorAssemblies (611ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (112ms)
+				ProcessInitializeOnLoadAttributes (420ms)
+				ProcessInitializeOnLoadMethodAttributes (40ms)
+				AfterProcessingInitializeOnLoad (29ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (18ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2012 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 92.1 MB.
+System memory in use after: 90.1 MB.
+
+Unloading 45 unused Assets to reduce memory usage. Loaded Objects now: 2496.
+Total: 5.344000 ms (FindLiveObjects: 0.318900 ms CreateObjectMapping: 0.155000 ms MarkObjects: 3.727700 ms  DeleteObjects: 1.140200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 603.724333 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/4 Ladder/1.png
+  artifactKey: Guid(3e2bc3f5712dcfc449983f8f6ab0363e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/4 Ladder/1.png using Guid(3e2bc3f5712dcfc449983f8f6ab0363e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef0ca498d58573c9d533864c27042d7e') in 0.050586 seconds 
+  Import took 0.054861 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000345 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/4 Ladder/3.png
+  artifactKey: Guid(d8916dd3da0e988428906abaf3fc53e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/4 Ladder/3.png using Guid(d8916dd3da0e988428906abaf3fc53e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c7f320d5fbca5e9eda1627a2f70efc4') in 0.020813 seconds 
+  Import took 0.023510 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000341 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/4 Ladder/2_1.png
+  artifactKey: Guid(5f500879a3cfff347aa195af58dc6d48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/4 Ladder/2_1.png using Guid(5f500879a3cfff347aa195af58dc6d48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fba6983a887c40d8755d4a4287b4a07') in 0.017252 seconds 
+  Import took 0.020403 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/4 Ladder/3_1.png
+  artifactKey: Guid(24da97826de970448b04affe787887fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/4 Ladder/3_1.png using Guid(24da97826de970448b04affe787887fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbb83d05aa514da62324788e5924cbee') in 0.018080 seconds 
+  Import took 0.021568 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000407 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/4 Ladder/1_1.png
+  artifactKey: Guid(43985d07296f0fc40aee4314fe83c946) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/4 Ladder/1_1.png using Guid(43985d07296f0fc40aee4314fe83c946) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '456420af5424f53d4bfd019a405d1548') in 0.020667 seconds 
+  Import took 0.023460 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000350 seconds.
+  path: Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/4 Ladder/2.png
+  artifactKey: Guid(a1b501a2189a53442a65db10555e64cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Craftpix/craftpix-781162-simple-platformer-tileset-pixel-art/3 Objects/4 Ladder/2.png using Guid(a1b501a2189a53442a65db10555e64cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c35a848684ecf5e0bd61ce111277162f') in 0.019854 seconds 
+  Import took 0.022440 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
