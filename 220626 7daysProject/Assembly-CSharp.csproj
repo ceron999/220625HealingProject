@@ -53,10 +53,13 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Mir.cs" />
+    <Compile Include="Assets\Scripts\Manager\GameManager.cs" />
     <Compile Include="Assets\Scripts\UI\MoveUI.cs" />
     <Compile Include="Assets\Scripts\UI\ActionUI.cs" />
+    <Compile Include="Assets\Scripts\Manager\Dialogues\Dialogue.cs" />
+    <Compile Include="Assets\Scripts\Manager\Dialogues\InteractionEvent.cs" />
+    <Compile Include="Assets\Scripts\Manager\Dialogues\DialogueParser.cs" />
+    <Compile Include="Assets\Scripts\Manager\Dialogues\DataBaseManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Craftpix\craftpix-891178-free-3-character-sprite-sheets-pixel-art\license.txt" />
