@@ -2,15 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//해당 씬에서 파싱한 특정 데이터를 원할 때,
+//DialogueParser를 통해 csv파일을 파싱하고, 해당 데이터를 dialogueDictionary에 저장하는 매니저.
+
 public class DataBaseManager : MonoBehaviour
 {
     public static DataBaseManager dataBaseManager;
 
     [SerializeField] string csvFileName;
-    public int sceneNum;
-    
+
     Dictionary<int, Dialogue> dialogueDictionary = new Dictionary<int, Dialogue>();
-    
+
     public static bool isFinished = false;
 
     void Awake()
@@ -27,16 +29,37 @@ public class DataBaseManager : MonoBehaviour
         }
     }
 
-    private void Start()
+    public void SetDialogueDictionary()
     {
         //parser를 불러와서 파싱한 dialogueList를 가져온다.
-        DialogueParser theParser = GetComponent<DialogueParser>(); 
+        DialogueParser theParser = GetComponent<DialogueParser>();
         Dialogue[] dialogues = theParser.Parse(csvFileName);
 
-        for(int i =1; i<dialogues.Length;)
+        for (int i = 0; i < dialogues.Length; i++)
         {
-            dialogueDictionary.Add(sceneNum, dialogues[i]);
+            dialogueDictionary.Add(i + 1, dialogues[i]);
         }
         isFinished = true;
+    }
+
+    public void ResetDialogueDictionary()
+    {
+        for(int i=0; i<dialogueDictionary.Count; i++)
+        {
+            dialogueDictionary.Remove(i);
+        }
+        isFinished = false;
+    }
+
+    public Dialogue[] GetDialogue(int startNum, int endNum)
+    {
+        List<Dialogue> dialogueList = new List<Dialogue>();
+
+        for(int i =0; i<endNum - startNum; i++)
+        {
+            dialogueList.Add(dialogueDictionary[startNum + i]);
+        }
+
+        return dialogueList.ToArray();
     }
 }

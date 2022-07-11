@@ -8,8 +8,6 @@ public class DialogueParser : MonoBehaviour
 {
     public Dialogue[] Parse(string csvFileName)
     {
-        Dialogue dialogue = new Dialogue();
-
        //현재 파싱을 원하는 파일의 위치를 찾기 위한 string 모음
        string directory = "CsvFiles/";
         
@@ -23,21 +21,29 @@ public class DialogueParser : MonoBehaviour
         
         string[] data = csvData.text.Split(new char[] { '\n' });    //\n에 따라 쪼갬
 
-        for (int i = 1; i < data.Length;)
+        for (int i = 1; i < data.Length - 1;)
         {
             string[] row = data[i].Split(new char[] { ',' });
 
+            Dialogue dialogue = new Dialogue();
+            
             dialogue.name = row[1];
-            dialogue.contexts = row[2];
+            List<string> contextList = new List<string>();
 
-            if (++i < data.Length)
+            do
             {
-                break;
-            }
+                contextList.Add(row[2]);
 
+                if (++i < data.Length - 1)
+                    row = data[i].Split(new char[] { ',' });
+                else break;
+
+            } while (row[0].ToString() == "");
+
+            dialogue.contexts = contextList.ToArray();
+            
             dialogueList.Add(dialogue);
         }
-
         return dialogueList.ToArray();
     }
 }
