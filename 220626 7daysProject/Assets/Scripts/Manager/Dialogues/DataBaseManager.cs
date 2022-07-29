@@ -11,7 +11,7 @@ public class DataBaseManager : MonoBehaviour
 
     [SerializeField] string csvFileName;
 
-    Dictionary<int, Dialogue> dialogueDictionary = new Dictionary<int, Dialogue>();
+    public Dictionary<int, Dialogue> dialogueDictionary = new Dictionary<int, Dialogue>();
 
     public static bool isFinished = false;
 
@@ -29,11 +29,11 @@ public class DataBaseManager : MonoBehaviour
         }
     }
 
-    public void SetDialogueDictionary()
+    public void SetDialogueDictionary(string getCsvFileName)
     {
         //parser를 불러와서 파싱한 dialogueList를 가져온다.
         DialogueParser theParser = GetComponent<DialogueParser>();
-        Dialogue[] dialogues = theParser.Parse(csvFileName);
+        Dialogue[] dialogues = theParser.Parse(getCsvFileName);
 
         for (int i = 0; i < dialogues.Length; i++)
         {

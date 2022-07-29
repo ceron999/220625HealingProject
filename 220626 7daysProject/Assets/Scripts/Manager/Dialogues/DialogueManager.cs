@@ -10,26 +10,85 @@ public class DialogueManager : MonoBehaviour
     public static DialogueManager dialogueManager;
 
     public static bool isTalking = false;
+    bool isChangeChar = false;
+    bool isContextFinish = false;
 
     public GameObject TalkUI;
     public Text characterNameText;
     public Text talkText;
 
-    // Start is called before the first frame update
+    public Dictionary<int, Dialogue> dialogueDict = new Dictionary<int, Dialogue>();
+    
     void Awake()
     {
         if (dialogueManager == null)
             dialogueManager = this;
     }
 
-    private void Update()
+    private void Start()
     {
-        if (isTalking) 
-            ;
+        SetDictionary();
+        StartCoroutine(PrintDialogue());
     }
 
-    /// 1. DataBaseManager에서 diaglogueDictonary를 받아온다.
-    /// 2. dictonary에 있는 이름과 context를 출력한다.
-    /// 3. 터치가 들어올 떄마다 다음 문장으로 넘어간다.
-    /// 4. 모든 문장이 끝이 나면 talkUI를 setActive(false)시킨다.
+    public void SetDictionary()
+    {
+        DataBaseManager.dataBaseManager.SetDialogueDictionary("Scene0Intro");
+        dialogueDict = DataBaseManager.dataBaseManager.dialogueDictionary;
+    }
+
+    public IEnumerator PrintDialogue()
+    {
+        int dialogueSize;
+
+        dialogueSize = DataBaseManager.dataBaseManager.dialogueDictionary.Count;
+
+        for (int i = 1; i <= dialogueSize; i++)
+        {
+            yield return StartCoroutine(TypingContext(i));
+        }
+    }
+
+    IEnumerator TypingContext(int contextIdx)
+    {
+        //한 캐릭터가 말하는 대사의 개수 ex) 할아버지가 연속으로 7개의 대사를 하면 contextSize = 7;
+        int contextSize;
+        contextSize = dialogueDict[contextIdx].contexts.Length;
+
+        characterNameText.text = dialogueDict[contextIdx].name;
+
+        for(int i=0; i< contextSize; i++)
+        {
+            talkText.text = "";
+
+            //출력하는 대사의 길이를 나타내는 값
+            int getCount = dialogueDict[contextIdx].contexts[i].Length;
+
+            
+            for (int j=0; j< getCount; j++)
+            {
+                //한글자씩 출력합니다잉
+                talkText.text += dialogueDict[contextIdx].contexts[i][j];
+
+                //만일 터치하면 대사를 한번에 보여줍니다잉
+                if (Input.GetMouseButtonDown(0))
+                { 
+                    talkText.text = dialogueDict[contextIdx].contexts[i];
+                    isContextFinish = true;
+                    break;
+                }
+                yield return new WaitForSeconds(0.1f);
+
+                if(j == getCount - 1) isContextFinish = true;
+            }
+
+            //다음 대사로 넘아갑니다
+            if (isContextFinish)
+            {
+                yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+                isContextFinish = false;
+            }
+        }
+
+    }
 }
