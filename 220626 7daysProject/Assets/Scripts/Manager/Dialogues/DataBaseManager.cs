@@ -21,11 +21,11 @@ public class DataBaseManager : MonoBehaviour
         if (dataBaseManager == null)
         {
             dataBaseManager = this;
-            //DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
     }
 

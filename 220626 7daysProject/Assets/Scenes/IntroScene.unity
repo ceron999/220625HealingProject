@@ -516,9 +516,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c2dbcd32e2177f42b77a0e4804ccf81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TalkUI: {fileID: 774793661}
+  talkUI: {fileID: 774793661}
   characterNameText: {fileID: 1564939084}
   talkText: {fileID: 322712714}
+  csvFileName: test
+  nextSceneName: Village1Scene
 --- !u!1 &774793661
 GameObject:
   m_ObjectHideFlags: 0
