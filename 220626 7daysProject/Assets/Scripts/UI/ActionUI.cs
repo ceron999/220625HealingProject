@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 
 public class ActionUI : MonoBehaviour
 {
-    //Mir ø¿∫Í¡ß∆Æ
+    //Mir Ïò§Î∏åÏ†ùÌä∏
     public GameObject mir;
     Rigidbody2D mirRigid;
     SpriteRenderer mirSpriteRenderer;
@@ -24,4 +24,8 @@ public class ActionUI : MonoBehaviour
         mirAnimator.Play("MirAttack");
     }
 
+    public void MirJump()
+    {
+
+    }
 }
