@@ -6,15 +6,16 @@ TagManager:
   tags:
   - TutorialRequirement
   - NPC
+  - Tile
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
+  - TIle
+  - NPC
   - 
   - 
   - 
