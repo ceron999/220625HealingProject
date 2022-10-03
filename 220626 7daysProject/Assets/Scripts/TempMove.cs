@@ -1,17 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Text;
 
 public class TempMove : MonoBehaviour
 {
+    [SerializeField] PortalManager portalManager;
+
     public GameObject mir;
     Rigidbody2D mirRigid;
     SpriteRenderer mirSpriteRenderer;
     Animator mirAnimator;
-    public float maxSpeed = 2.0f;   //ÃÖ´ë ¼Óµµ
-    public float moveSpeed;                        //MirÀÇ ÀÌµ¿ ¹æÇâÀ» Á¤ÇÏ´Â º¯¼ö
-    public float jumpSpeed = 2.0f;
+
+    public float maxSpeed;   //ìµœëŒ€ ì†ë„
+    public float moveDirection;                        //Mirì˜ ì´ë™ ë°©í–¥ì„ ì •í•˜ëŠ” ë³€ìˆ˜
+    public float jumpPower;
     bool isJump = false;
+
+    int tileLayer = 1 << 6; // tileì˜ ë ˆì´ì–´ = 6
+    string portalName;
 
     RaycastHit2D hit;
 
@@ -24,31 +32,38 @@ public class TempMove : MonoBehaviour
 
     void Update()
     {
-        Move();   //ÀÌµ¿ ¹öÆ°ÀÌ ´­·ÁÀÖ´Ù¸é Mir°¡ ¿òÁ÷ÀÎ´Ù.
+        Move();   //ì´ë™ ë²„íŠ¼ì´ ëˆŒë ¤ìˆë‹¤ë©´ Mirê°€ ì›€ì§ì¸ë‹¤.
         Jump();
     }
 
-    private void FixedUpdate()
+    private void OnTriggerStay2D(Collider2D collision)
     {
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            portalName = collision.transform.name;
+            
+            if (collision.transform.tag == "Portal")
+                TakePortal(portalName);
+        }
     }
 
     public void Move()
     {
-        moveSpeed = Input.GetAxisRaw("Horizontal");
+        moveDirection = Input.GetAxisRaw("Horizontal");
 
-        mirRigid.AddForce(Vector2.right * moveSpeed, ForceMode2D.Impulse);
+        mirRigid.AddForce(Vector2.right * moveDirection, ForceMode2D.Impulse);
 
-        if(moveSpeed == 1)
+        if(moveDirection == 1)
         {
-            mirSpriteRenderer.flipX = false;    //Mir°¡ ¿À¸¥ÂÊÀ» ÃÄ´Ùº¸°Ô ÇÕ´Ï´Ù.
-            mirAnimator.SetBool("mirIsMove", true); //Mir°¡ Move animationÀ» ½ÇÇàÇÕ´Ï´Ù.
+            mirSpriteRenderer.flipX = false;    //Mirê°€ ì˜¤ë¥¸ìª½ì„ ì³ë‹¤ë³´ê²Œ í•©ë‹ˆë‹¤.
+            mirAnimator.SetBool("mirIsMove", true); //Mirê°€ Move animationì„ ì‹¤í–‰í•©ë‹ˆë‹¤.
         }
-        else if(moveSpeed == -1)
+        else if(moveDirection == -1)
         {
-            mirSpriteRenderer.flipX = true;    //Mir°¡ ¿ŞÂÊÀ» ÃÄ´Ùº¸°Ô ÇÕ´Ï´Ù.
-            mirAnimator.SetBool("mirIsMove", true); //Mir°¡ Move animationÀ» ½ÇÇàÇÕ´Ï´Ù.
+            mirSpriteRenderer.flipX = true;    //Mirê°€ ì™¼ìª½ì„ ì³ë‹¤ë³´ê²Œ í•©ë‹ˆë‹¤.
+            mirAnimator.SetBool("mirIsMove", true); //Mirê°€ Move animationì„ ì‹¤í–‰í•©ë‹ˆë‹¤.
         }
-        else if(moveSpeed == 0)
+        else if(moveDirection == 0)
         {
             mirRigid.velocity = new Vector2(0,0);
             mirAnimator.SetBool("mirIsMove", false);
@@ -62,16 +77,43 @@ public class TempMove : MonoBehaviour
 
     void Jump()
     {
-        Debug.DrawRay(mirRigid.position, Vector2.down * 0.4f, Color.red);
-        hit = Physics2D.Raycast(mirRigid.position, Vector2.down, 0.5f);
-
+        Debug.DrawRay(mirRigid.position, Vector2.down * 0.3f, Color.red);
+        hit = Physics2D.Raycast(mirRigid.position, Vector2.down, 0.3f, tileLayer);
+        
         if (hit.collider != null)
-            Debug.Log(hit.transform.name);
+        {
+            if (hit.transform.name == "Tilemap")
+            {
+                isJump = false;
+            }
+        }
+        else
+        {
+            isJump = true;
+        }
 
         if (Input.GetKeyDown(KeyCode.C) && !isJump)
         {
-            mirRigid.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
-            //isJump = true;
+            mirRigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+        }
+
+        if (isJump && mirRigid.velocity.x == 0)
+        {
+            mirRigid.AddForce(Vector2.down * 2, ForceMode2D.Impulse);
+        }
+    }
+
+    void TakePortal(string getPortalName)
+    {
+        if(portalManager.CanTakePortal(getPortalName))
+        {
+            //ì”¬ ì´ë¦„ ì–»ëŠ” ì¤‘
+            StringBuilder sceneName = new StringBuilder();
+            sceneName.Append(getPortalName);
+            sceneName.Remove(getPortalName.Length - 6, 6);
+
+            //í•´ë‹¹ ì”¬ìœ¼ë¡œ ì´ë™
+            SceneManager.LoadScene(sceneName.ToString());
         }
     }
 }
