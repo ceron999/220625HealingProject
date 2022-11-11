@@ -12,6 +12,7 @@ public class TempMove : MonoBehaviour
     Rigidbody2D mirRigid;
     SpriteRenderer mirSpriteRenderer;
     Animator mirAnimator;
+    [SerializeField] GameObject mirAttackRange;
 
     public float maxSpeed;   //최대 속도
     public float moveDirection;                        //Mir의 이동 방향을 정하는 변수
@@ -34,6 +35,7 @@ public class TempMove : MonoBehaviour
     {
         Move();   //이동 버튼이 눌려있다면 Mir가 움직인다.
         Jump();
+        Attack();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -65,7 +67,7 @@ public class TempMove : MonoBehaviour
         }
         else if(moveDirection == 0)
         {
-            mirRigid.velocity = new Vector2(0,0);
+            mirRigid.velocity = new Vector2(0, mirRigid.velocity.y);
             mirAnimator.SetBool("mirIsMove", false);
         }
 
@@ -77,6 +79,7 @@ public class TempMove : MonoBehaviour
 
     void Jump()
     {
+        //Debug.Log(mirRigid.velocity);
         Debug.DrawRay(mirRigid.position, Vector2.down * 0.3f, Color.red);
         hit = Physics2D.Raycast(mirRigid.position, Vector2.down, 0.3f, tileLayer);
         
@@ -96,11 +99,6 @@ public class TempMove : MonoBehaviour
         {
             mirRigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
         }
-
-        if (isJump && mirRigid.velocity.x == 0)
-        {
-            mirRigid.AddForce(Vector2.down * 2, ForceMode2D.Impulse);
-        }
     }
 
     void TakePortal(string getPortalName)
@@ -114,6 +112,23 @@ public class TempMove : MonoBehaviour
 
             //해당 씬으로 이동
             SceneManager.LoadScene(sceneName.ToString());
+        }
+    }
+    
+    void Attack()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftControl))
+        {
+            mirAttackRange.SetActive(true);
+            mirAnimator.Play("MirAttack");
+            
+        }
+
+        //공격 모션이 끝나면 공격 콜라이더를 비활성화시킴
+        if (mirAnimator.GetCurrentAnimatorStateInfo(0).IsName("MirAttack")
+            && mirAnimator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.9f)
+        {
+            mirAttackRange.SetActive(false);
         }
     }
 }

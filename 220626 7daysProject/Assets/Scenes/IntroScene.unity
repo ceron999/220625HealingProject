@@ -460,6 +460,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65b5db4f57aeb843976a8bbb122446b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTutorialGoalClear: 0
+  isTutorialClear: 0
 --- !u!1 &605612390
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,6 +492,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65b5db4f57aeb843976a8bbb122446b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTutorialGoalClear: 0
+  isTutorialClear: 0
 --- !u!4 &605612392
 Transform:
   m_ObjectHideFlags: 0
@@ -519,7 +523,7 @@ MonoBehaviour:
   talkUI: {fileID: 774793661}
   characterNameText: {fileID: 1564939084}
   talkText: {fileID: 322712714}
-  csvFileName: test
+  csvFileName: Scene0Intro
   nextSceneName: Village1Scene
 --- !u!1 &774793661
 GameObject:
