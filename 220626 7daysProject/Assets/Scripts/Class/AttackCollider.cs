@@ -21,7 +21,7 @@ public class AttackCollider : MonoBehaviour
         switch (collisionName)
         {
             case "TutorialGoal":
-                GameManager.gameManager.isTutorialGoalClear = true;
+                GameManager.singleton.isTutorialGoalClear = true;
                 break;
         }
             

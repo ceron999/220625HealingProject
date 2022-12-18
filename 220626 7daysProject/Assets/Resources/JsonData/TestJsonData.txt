@@ -1,0 +1,23 @@
+{
+	"dialogueArray":
+		[
+			{
+				"actionString":"GoToOldMan"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"player",
+				"dialogue":"...내 방에 혼자가 되니 괜히 적적한 느낌이 들었다."
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"player",
+				"dialogue":"무언가 허전하고, 붕뜬 느낌이 들기도 하고..."
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"player",
+				"dialogue":"앗 맞다! 지각이다!"
+			}
+		]
+}

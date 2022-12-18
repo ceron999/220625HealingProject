@@ -4,9 +4,9 @@ using UnityEngine;
 using System.IO;
 using System.Text;
 
-public class DialogueParser : MonoBehaviour
+public class CsvDialogueParser : MonoBehaviour
 {
-    public Dialogue[] Parse(string csvFileName)
+    public CsvDialogue[] Parse(string csvFileName)
     {
        //현재 파싱을 원하는 파일의 위치를 찾기 위한 string 모음
        string directory = "CsvFiles/";
@@ -16,7 +16,7 @@ public class DialogueParser : MonoBehaviour
 
         builder.Append(csvFileName);
 
-        List<Dialogue> dialogueList = new List<Dialogue>(); //대화 리스트 생성
+        List<CsvDialogue> dialogueList = new List<CsvDialogue>(); //대화 리스트 생성
         TextAsset csvData = Resources.Load<TextAsset>(builder.ToString()); //csv파일 가져오기
         
         string[] data = csvData.text.Split(new char[] { '\n' });    //\n에 따라 쪼갬
@@ -25,7 +25,7 @@ public class DialogueParser : MonoBehaviour
         {
             string[] row = data[i].Split(new char[] { ',' });
 
-            Dialogue dialogue = new Dialogue();
+            CsvDialogue dialogue = new CsvDialogue();
             
             dialogue.name = row[1];
             List<string> contextList = new List<string>();

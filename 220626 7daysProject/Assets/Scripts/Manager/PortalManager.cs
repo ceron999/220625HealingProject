@@ -6,7 +6,7 @@ public class PortalManager : MonoBehaviour
 {
     [SerializeField] GameObject tutorialScenePortal;
 
-    //Æ÷Å»À» Å» ¼ö ÀÖ´ÂÁö °Ë»çÇÕ´Ï´Ù.
+    //í¬íƒˆì„ íƒˆ ìˆ˜ ìˆëŠ”ì§€ ê²€ì‚¬í•©ë‹ˆë‹¤.
     public bool CanTakePortal(string getPortalName)
     {
         Debug.Log(getPortalName);
@@ -15,11 +15,11 @@ public class PortalManager : MonoBehaviour
             case "TutorialScenePortal":
                 return true;
 
-                //Á» ´õ ¹ü¿ë¼º ÀÖ°Ô »ç¿ëÇÏ±â À§ÇØ¼­´Â ÀÌ ºÎºĞ º¯°æÇØ¾ßÇÔ@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                //ì¢€ ë” ë²”ìš©ì„± ìˆê²Œ ì‚¬ìš©í•˜ê¸° ìœ„í•´ì„œëŠ” ì´ ë¶€ë¶„ ë³€ê²½í•´ì•¼í•¨@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
             case "Village1ScenePortal":
-                if (GameManager.gameManager.isTutorialGoalClear)
+                if (GameManager.singleton.isTutorialGoalClear)
                 {
-                    GameManager.gameManager.isTutorialClear = true;
+                    GameManager.singleton.isTutorialClear = true;
                     return true;
                 }
                 break;
@@ -28,13 +28,13 @@ public class PortalManager : MonoBehaviour
         return false;
     }
 
-    //Æ©Åä¸®¾ó Æ÷Å»ÀÇ È°¼ºÈ­ ¿©ºÎ¸¦ °áÁ¤ÇÕ´Ï´Ù. 
+    //íŠœí† ë¦¬ì–¼ í¬íƒˆì˜ í™œì„±í™” ì—¬ë¶€ë¥¼ ê²°ì •í•©ë‹ˆë‹¤. 
     void SetTutorialPortal()
     {
-        if (GameManager.gameManager.isTutorialClear)
+        if (GameManager.singleton.isTutorialClear)
         {
             tutorialScenePortal.SetActive(false);
-            Debug.Log("Æ©Åä Å¬¸®¾î");
+            Debug.Log("íŠœí†  í´ë¦¬ì–´");
         }
     }
 

@@ -5,13 +5,13 @@ using UnityEngine;
 //해당 씬에서 파싱한 특정 데이터를 원할 때,
 //DialogueParser를 통해 csv파일을 파싱하고, 해당 데이터를 dialogueDictionary에 저장하는 매니저.
 
-public class DataBaseManager : MonoBehaviour
+public class CsvDataBaseManager : MonoBehaviour
 {
-    public static DataBaseManager dataBaseManager;
+    public static CsvDataBaseManager dataBaseManager;
 
     [SerializeField] string csvFileName;
 
-    public Dictionary<int, Dialogue> dialogueDictionary = new Dictionary<int, Dialogue>();
+    public Dictionary<int, CsvDialogue> dialogueDictionary = new Dictionary<int, CsvDialogue>();
 
     public static bool isFinished = false;
 
@@ -32,8 +32,8 @@ public class DataBaseManager : MonoBehaviour
     public void SetDialogueDictionary(string getCsvFileName)
     {
         //parser를 불러와서 파싱한 dialogueList를 가져온다.
-        DialogueParser theParser = GetComponent<DialogueParser>();
-        Dialogue[] dialogues = theParser.Parse(getCsvFileName);
+        CsvDialogueParser theParser = GetComponent<CsvDialogueParser>();
+        CsvDialogue[] dialogues = theParser.Parse(getCsvFileName);
 
         for (int i = 0; i < dialogues.Length; i++)
         {
@@ -51,9 +51,9 @@ public class DataBaseManager : MonoBehaviour
         isFinished = false;
     }
 
-    public Dialogue[] GetDialogue(int startNum, int endNum)
+    public CsvDialogue[] GetDialogue(int startNum, int endNum)
     {
-        List<Dialogue> dialogueList = new List<Dialogue>();
+        List<CsvDialogue> dialogueList = new List<CsvDialogue>();
 
         for(int i =0; i<endNum - startNum; i++)
         {

@@ -1,30 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 //gameManager에서 대화를 원할 떄 나타나서 대화를 출력하는 매니저
 
-public class DialogueManager : MonoBehaviour
+public class CsvDialogueManager : MonoBehaviour
 {
-    public static DialogueManager dialogueManager;
-
-    public static bool isTalking = false;
-
     public GameObject talkUI;
     public Text characterNameText;
     public Text talkText;
 
-    public Dictionary<int, Dialogue> dialogueDict = new Dictionary<int, Dialogue>();
+    public Dictionary<int, CsvDialogue> dialogueDict = new Dictionary<int, CsvDialogue>();
     public string csvFileName;
     public string nextSceneName;
-    
-    void Awake()
-    {
-        if (dialogueManager == null)
-            dialogueManager = this;
-    }
+
 
     private void Start()
     {
@@ -32,17 +23,23 @@ public class DialogueManager : MonoBehaviour
         StartCoroutine(PrintDialogue());
     }
 
+    private void Update()
+    {
+        if(Input.GetKey(KeyCode.LeftControl))
+            SpreadText();
+    }
+
     public void SetDictionary()
     {
-        DataBaseManager.dataBaseManager.SetDialogueDictionary(csvFileName);
-        dialogueDict = DataBaseManager.dataBaseManager.dialogueDictionary;
+        CsvDataBaseManager.dataBaseManager.SetDialogueDictionary(csvFileName);
+        dialogueDict = CsvDataBaseManager.dataBaseManager.dialogueDictionary;
     }
 
     public IEnumerator PrintDialogue()
     {
         int dialogueSize;
 
-        dialogueSize = DataBaseManager.dataBaseManager.dialogueDictionary.Count;
+        dialogueSize = CsvDataBaseManager.dataBaseManager.dialogueDictionary.Count;
 
         for (int i = 1; i <= dialogueSize; i++)
         {
@@ -63,22 +60,34 @@ public class DialogueManager : MonoBehaviour
 
         characterNameText.text = dialogueDict[contextIdx].name;
 
-        for(int i=0; i< contextSize; i++)
+        for(int contextCol=0; contextCol< contextSize; contextCol++)
         {
             talkText.text = "";
             
             //출력하는 대사의 길이를 나타내는 값
-            int getCount = dialogueDict[contextIdx].contexts[i].Length;
+            int getCount = dialogueDict[contextIdx].contexts[contextCol].Length;
             
-            for (int j=0; j< getCount; j++)
+            for (int contextRow=0; contextRow < getCount; contextRow++)
             {
-                //한글자씩 출력합니다잉
-                talkText.text += dialogueDict[contextIdx].contexts[i][j];
+                if (dialogueDict[contextIdx].contexts[contextCol][contextRow] != '^')
+                    //한글자씩 출력합니다잉
+                    talkText.text += dialogueDict[contextIdx].contexts[contextCol][contextRow];
+                else
+                    talkText.text += ',';
+                
 
                 //만일 터치하면 대사를 한번에 보여줍니다잉
                 if (Input.GetMouseButton(0))
                 {
-                    talkText.text = dialogueDict[contextIdx].contexts[i];
+                    talkText.text = "";
+                    for(int i=0; i< dialogueDict[contextIdx].contexts[contextCol].Length; i++)
+                    {
+                        if (dialogueDict[contextIdx].contexts[contextCol][i] != '^')
+                            //한글자씩 출력합니다잉
+                            talkText.text += dialogueDict[contextIdx].contexts[contextCol][i];
+                        else
+                            talkText.text += ',';
+                    }
                     break;
                 }
 
@@ -96,5 +105,10 @@ public class DialogueManager : MonoBehaviour
             ///문제는 내가 클릭을 누르고 떼는 시간동안 다음 코드가 진행되어 발생하므로
             ///다음 코드를 지연시켜 클릭이 완전히 끝난 다음에 실행되도록 waitForSeconds를 추가 삽입.
         }
+    }
+
+    void SpreadText()
+    {
+
     }
 }

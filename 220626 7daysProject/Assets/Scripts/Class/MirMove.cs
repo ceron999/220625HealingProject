@@ -4,15 +4,17 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Text;
 
-public class TempMove : MonoBehaviour
+public class MirMove : MonoBehaviour
 {
     [SerializeField] PortalManager portalManager;
 
-    public GameObject mir;
+    [SerializeField]
+    GameObject mir;
     Rigidbody2D mirRigid;
     SpriteRenderer mirSpriteRenderer;
     Animator mirAnimator;
-    [SerializeField] GameObject mirAttackRange;
+    [SerializeField] 
+    GameObject mirAttackRange;
 
     public float maxSpeed;   //최대 속도
     public float moveDirection;                        //Mir의 이동 방향을 정하는 변수
@@ -49,23 +51,58 @@ public class TempMove : MonoBehaviour
         }
     }
 
+    public IEnumerator MoveToDest(Transform dest)
+    {
+        Vector2 nowPos = mirRigid.position;
+        Vector2 destPos = dest.position;
+        if (destPos.x > nowPos.x)
+            moveDirection = 1;
+        else if (destPos.x < nowPos.x)
+            moveDirection = -1;
+        else
+            moveDirection = 0;
+
+        if (moveDirection == 1)
+        {
+            mirSpriteRenderer.flipX = false;    //Mir가 오른쪽을 쳐다보게 합니다.
+            mirAnimator.SetBool("mirIsMove", true); //Mir가 Move animation을 실행합니다.
+        }
+        else if (moveDirection == -1)
+        {
+            mirSpriteRenderer.flipX = true;    //Mir가 왼쪽을 쳐다보게 합니다.
+            mirAnimator.SetBool("mirIsMove", true); //Mir가 Move animation을 실행합니다.
+        }
+        else if (moveDirection == 0)
+        {
+            mirRigid.velocity = new Vector2(0, mirRigid.velocity.y);
+            mirAnimator.SetBool("mirIsMove", false);
+        }
+
+        while(Mathf.Abs(nowPos.x - destPos.x) >= 0.1f)
+        {
+
+            yield return null;
+        }
+
+    }
+
     public void Move()
     {
         moveDirection = Input.GetAxisRaw("Horizontal");
 
         mirRigid.AddForce(Vector2.right * moveDirection, ForceMode2D.Impulse);
 
-        if(moveDirection == 1)
+        if (moveDirection == 1)
         {
             mirSpriteRenderer.flipX = false;    //Mir가 오른쪽을 쳐다보게 합니다.
             mirAnimator.SetBool("mirIsMove", true); //Mir가 Move animation을 실행합니다.
         }
-        else if(moveDirection == -1)
+        else if (moveDirection == -1)
         {
             mirSpriteRenderer.flipX = true;    //Mir가 왼쪽을 쳐다보게 합니다.
             mirAnimator.SetBool("mirIsMove", true); //Mir가 Move animation을 실행합니다.
         }
-        else if(moveDirection == 0)
+        else if (moveDirection == 0)
         {
             mirRigid.velocity = new Vector2(0, mirRigid.velocity.y);
             mirAnimator.SetBool("mirIsMove", false);
