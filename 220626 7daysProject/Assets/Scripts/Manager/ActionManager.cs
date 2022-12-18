@@ -45,12 +45,13 @@ public class ActionManager : MonoBehaviour
         mir.SetActive(false);
         yield return new WaitForSeconds(0.5f);
 
+        SetMainCamera(playerCamera);
         mir.SetActive(true);
         yield return new WaitForSeconds(0.3f);
         //미르가 노인에게 가까이 감
-        mirMoveData.MoveToDest(dest);
+        StartCoroutine(mirMoveData.MoveToDest(dest, 0.7f));
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
         dialogueManager.DialoguePrefabToggle(true);
         dialogueManager.ScreenTouchEvent();
     }

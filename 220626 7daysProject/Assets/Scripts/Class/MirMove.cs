@@ -51,10 +51,12 @@ public class MirMove : MonoBehaviour
         }
     }
 
-    public IEnumerator MoveToDest(Transform dest)
+    public IEnumerator MoveToDest(Transform dest, float endTime)
     {
         Vector2 nowPos = mirRigid.position;
         Vector2 destPos = dest.position;
+        destPos.x += 0.15f;
+
         if (destPos.x > nowPos.x)
             moveDirection = 1;
         else if (destPos.x < nowPos.x)
@@ -78,12 +80,16 @@ public class MirMove : MonoBehaviour
             mirAnimator.SetBool("mirIsMove", false);
         }
 
-        while(Mathf.Abs(nowPos.x - destPos.x) >= 0.1f)
+        float startTime = 0;
+        while(startTime < endTime)
         {
+            mirAnimator.SetBool("mirIsMove", true);
+            startTime += (Time.deltaTime);
+
+            mirRigid.transform.position = Vector3.Lerp(nowPos, destPos, startTime / endTime);
 
             yield return null;
         }
-
     }
 
     public void Move()
