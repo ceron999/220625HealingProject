@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\Manager\OldDialogue\CsvDialogues\CsvInteractionEvent.cs" />
     <Compile Include="Assets\Scripts\OldScript\temp.cs" />
     <Compile Include="Assets\Scripts\UI\OldScript\MoveUI.cs" />
+    <Compile Include="Assets\Scripts\Manager\ActionManager.cs" />
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
     <Compile Include="Assets\Scripts\Manager\OldDialogue\CsvDialogues\CsvDialogue.cs" />
     <Compile Include="Assets\Scripts\Manager\BtnManager.cs" />
@@ -74,7 +75,9 @@
     <Compile Include="Assets\Scripts\Class\Dialogue\DialogueWrapper.cs" />
     <Compile Include="Assets\Scripts\Class\Dialogue\Dialogue.cs" />
     <Compile Include="Assets\Scripts\Class\AttackCollider.cs" />
-    <Compile Include="Assets\Scripts\Manager\ActionManager.cs" />
+    <Compile Include="Assets\Scripts\Class\SaveData\QuestSaveData.cs" />
+    <Compile Include="Assets\Scripts\Manager\PuzzleManagerParent.cs" />
+    <Compile Include="Assets\Scripts\Manager\TutorialPuzzleManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Craftpix\craftpix-891178-free-3-character-sprite-sheets-pixel-art\license.txt" />
@@ -85,6 +88,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+    <None Include="Assets\Resources\JsonData\TutorialStart.txt" />
     <None Include="Assets\Craftpix\craftpix-891178-free-3-character-sprite-sheets-pixel-art\Font.txt" />
     <None Include="Assets\Craftpix\craftpix-785613-cookery-game-assets-pixel-art-pack\Font.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />

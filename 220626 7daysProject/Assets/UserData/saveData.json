@@ -1,5 +1,11 @@
 {
     "isFirstStart": true,
+    "isPuzzleStart": [
+        true,
+        false,
+        false,
+        false
+    ],
     "isPuzzleClear": [
         false,
         false,

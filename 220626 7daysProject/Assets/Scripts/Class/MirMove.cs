@@ -16,6 +16,8 @@ public class MirMove : MonoBehaviour
     [SerializeField] 
     GameObject mirAttackRange;
 
+    public bool isAction = false;
+
     public float maxSpeed;   //최대 속도
     public float moveDirection;                        //Mir의 이동 방향을 정하는 변수
     public float jumpPower;
@@ -35,9 +37,12 @@ public class MirMove : MonoBehaviour
 
     void Update()
     {
-        Move();   //이동 버튼이 눌려있다면 Mir가 움직인다.
-        Jump();
-        Attack();
+        if (!isAction)
+        {
+            Move();   //이동 버튼이 눌려있다면 Mir가 움직인다.
+            Jump();
+            Attack();
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -90,6 +95,7 @@ public class MirMove : MonoBehaviour
 
             yield return null;
         }
+        mirAnimator.SetBool("mirIsMove", false);
     }
 
     public void Move()

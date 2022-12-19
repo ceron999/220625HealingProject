@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     JsonManager jsonManager;
     PortalManager portalManager;
 
+    public QuestSaveData questSaveData;
     public SaveData saveData;
 
     public string setDialogueName;
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
     {
         jsonManager = new JsonManager();
 
+        questSaveData = jsonManager.LoadQuestSaveData();
         saveData = jsonManager.LoadSaveData();
     }
 
@@ -35,6 +37,7 @@ public class GameManager : MonoBehaviour
     public void SetSaveDataClear()
     {
         saveData = new SaveData();
+        questSaveData = new QuestSaveData();
         jsonManager.SaveJson(saveData, "saveData");
     }
 }

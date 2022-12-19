@@ -81,7 +81,6 @@ public class JsonManager    //SH
     }
     public SaveData LoadSaveData()
     {
-        //이제 우리가 이전에 저장했던 데이터를 꺼내야한다
         SaveData gameData;
         string loadPath = Application.dataPath;
         string directory = "/UserData";
@@ -91,8 +90,7 @@ public class JsonManager    //SH
 
         StringBuilder builder = new StringBuilder(loadPath);
         builder.Append(directory);
-        //위까지는 세이브랑 똑같다
-        //파일스트림을 만들어준다. 파일모드를 open으로 해서 열어준다. 다 구글링이다
+
         string builderToString = builder.ToString();
         if (!Directory.Exists(builderToString))
         {
@@ -105,8 +103,6 @@ public class JsonManager    //SH
 
         if (File.Exists(builder.ToString()))
         {
-            //세이브 파일이 있는경우
-
             FileStream stream = new FileStream(builder.ToString(), FileMode.Open);
 
             byte[] bytes = new byte[stream.Length];
@@ -114,17 +110,53 @@ public class JsonManager    //SH
             stream.Close();
             string jsonData = Encoding.UTF8.GetString(bytes);
 
-            //텍스트를 string으로 바꾼다음에 FromJson에 넣어주면은 우리가 쓸 수 있는 객체로 바꿀 수 있다
             gameData = JsonUtility.FromJson<SaveData>(jsonData);
         }
         else
         {
             //세이브파일이 없는경우
             gameData = null;
-            //    = new SaveDataClass();
-            //gameData.AddMedicineBySymptom(medicineDataWrapper, Symptom.water, Symptom.fire);
         }
         return gameData;
-        //이 정보를 게임매니저나, 로딩으로 넘겨주는 것이당
+    }
+
+    public QuestSaveData LoadQuestSaveData()
+    {
+        QuestSaveData gameData;
+        string loadPath = Application.dataPath;
+        string directory = "/UserData";
+        string appender = "/QuestSaveData";
+
+        string dotJson = ".json";
+
+        StringBuilder builder = new StringBuilder(loadPath);
+        builder.Append(directory);
+
+        string builderToString = builder.ToString();
+        if (!Directory.Exists(builderToString))
+        {
+            Directory.CreateDirectory(builderToString);
+
+        }
+        builder.Append(appender);
+        builder.Append(dotJson);
+
+        if (File.Exists(builder.ToString()))
+        {
+            FileStream stream = new FileStream(builder.ToString(), FileMode.Open);
+
+            byte[] bytes = new byte[stream.Length];
+            stream.Read(bytes, 0, bytes.Length);
+            stream.Close();
+            string jsonData = Encoding.UTF8.GetString(bytes);
+
+            gameData = JsonUtility.FromJson<QuestSaveData>(jsonData);
+        }
+        else
+        {
+            //세이브파일이 없는경우
+            gameData = null;
+        }
+        return gameData;
     }
 }

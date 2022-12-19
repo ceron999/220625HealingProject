@@ -1,0 +1,116 @@
+{
+	"dialogueArray":
+		[
+			{
+				"actionString":"GoToOldMan"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"촌장님!"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"촌장님",
+				"dialogue":"오! 미르야. 일찍 일어났구나."
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"매일 이렇게 일찍 마을을 돌아다니시면 안 힘드신가요?"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"촌장님",
+				"dialogue":"나이를 먹으면 운동을 해야 해요. 안 그러면 아프단다."
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"촌장님",
+				"dialogue":"그럼 우리 미르는 왜 이렇게 일찍 일어났을꼬?"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"그냥 눈이 떠졌어요!"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"촌장님",
+				"dialogue":"오, 그렇구나! 그러면 특별히 할 일이 없니?"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"네! 엄마, 아빠도 일어나시려면 한참 남았으니까요."
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"촌장님",
+				"dialogue":"그렇다면 이 할비가 부탁 하나만 해도 될까?"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"촌장님",
+				"dialogue":"아주 쉬운 부탁이지만, 걸리면 안된단다…"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"네? 왜 걸리면 안되나요?"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"촌장님",
+				"dialogue":"걸리면 이 할배가 큰 일이 날 수도 있어요…"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"촌장님, 또 몰래 술 먹은거 걸렸어요?"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"촌장님",
+				"dialogue":"크…크흠…"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"근데 아주머니가 저한테 그랬는데…"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"혹시 영감이 또 술 찾으면 나한테 와서 말하라고요."
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"말해주면 초콜릿을 준다고 했어요."
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"촌장님",
+				"dialogue":"그러면 이건 어떻겠니?"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"촌장님",
+				"dialogue":"저 뒷마당에 있는 상자에서 몰래 술을 가져와주면…."
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"촌장님",
+				"dialogue":"우리 가게 특제! 블루베리 파이를 주마! 어떻니? "
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"바로 찾아오겠습니다. 촌장님."
+			},
+			{
+				"actionString":"GetTutorialQuest"
+			}
+		]
+}

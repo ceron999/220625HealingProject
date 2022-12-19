@@ -10,7 +10,7 @@ public enum Types
 
 public enum Actions
 {
-    Null, GoToOldMan
+    Null, GoToOldMan, GetTutorialQuest
 }
 
 [System.Serializable]

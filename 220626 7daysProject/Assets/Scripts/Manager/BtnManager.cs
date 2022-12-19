@@ -9,7 +9,7 @@ public class BtnManager : MonoBehaviour
     public void ClickStartBTN()
     {
         GameManager.singleton.SetSaveDataClear();
-        GameManager.singleton.setDialogueName = "TestJsonData";
+        GameManager.singleton.setDialogueName = "TutorialStart";
 
         SceneManager.LoadScene("VillageScene");
     }

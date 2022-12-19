@@ -26,6 +26,7 @@ public class DialogueManager : MonoBehaviour
 
     int nowDialogueIndex;
     bool isSkip = false;
+    public bool isDialogueStart = false;
     bool isDialoguePrinting = false;
     bool isDialogueEnd = false;
     Coroutine nowCoroutine;
@@ -52,7 +53,7 @@ public class DialogueManager : MonoBehaviour
     //for Developer
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && isDialogueStart)
         {
             StartCoroutine(SkipDialogue());
         }
@@ -78,6 +79,10 @@ public class DialogueManager : MonoBehaviour
                 SetScreenTouchCanvas(false);
                 DialoguePrefabToggle(false);
                 isDialogueEnd = true;
+                isDialogueStart = false;
+
+                if (actionManager.GetMirIsAction()) 
+                    actionManager.ControlMirAction(false);
             }
 
             if (nowDialogueIndex < dialogueWrapper.dialogueArray.Length)
@@ -152,14 +157,19 @@ public class DialogueManager : MonoBehaviour
     {
         if (!isSkip)
         {
-            if (nowDialogueIndex > dialogueWrapper.dialogueArray.Length)
+            if (dialogueWrapper.dialogueArray[nowDialogueIndex - 1].action != Actions.Null)
+                actionManager.SetAction(dialogueWrapper.dialogueArray[nowDialogueIndex - 1]);
+
+            if (nowDialogueIndex >= dialogueWrapper.dialogueArray.Length)
             {
                 SetScreenTouchCanvas(false);
                 dialoguePrefab.SetActive(false);
                 isDialogueEnd = true;
+                isDialogueStart = false;
+                actionManager.ControlMirAction(false);
             }
 
-            if (nowDialogueIndex <= dialogueWrapper.dialogueArray.Length)
+            if (nowDialogueIndex < dialogueWrapper.dialogueArray.Length)
             {
                 isSkip = true;
                 isDialoguePrinting = false;
