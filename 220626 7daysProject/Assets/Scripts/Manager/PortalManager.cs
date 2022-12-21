@@ -1,45 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PortalManager : MonoBehaviour
 {
-    [SerializeField] GameObject tutorialScenePortal;
+    [SerializeField]
+    DialogueManager dialogueManager;
 
-    //포탈을 탈 수 있는지 검사합니다.
-    public bool CanTakePortal(string getPortalName)
+
+    public void MoveScene(string getPortalName)
     {
-        Debug.Log(getPortalName);
-        switch (getPortalName)
+        switch(getPortalName)
         {
-            case "TutorialScenePortal":
-                return true;
-
-                //좀 더 범용성 있게 사용하기 위해서는 이 부분 변경해야함@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-            case "Village1ScenePortal":
-                if (GameManager.singleton.isTutorialGoalClear)
-                {
-                    GameManager.singleton.isTutorialClear = true;
-                    return true;
-                }
+            case "TutorialPortal":
+                SceneManager.LoadScene("TutorialScene");
                 break;
-
+            case "TutorialEndPortal":
+                UseTutorialEndPortal();
+                break;
         }
-        return false;
     }
 
-    //튜토리얼 포탈의 활성화 여부를 결정합니다. 
-    void SetTutorialPortal()
+    void UseTutorialEndPortal()
     {
-        if (GameManager.singleton.isTutorialClear)
+        if (!GameManager.singleton.questSaveData.isNowQuestClear && dialogueManager.dialogueWrapperName == "")
         {
-            tutorialScenePortal.SetActive(false);
-            Debug.Log("튜토 클리어");
+            dialogueManager.LoadDialogue("TutorialPortal");
+            Debug.Log("아직 게임 못깸");
         }
-    }
-
-    private void Start()
-    {
-        SetTutorialPortal();
+        else
+        {
+            GameManager.singleton.SaveNowData();
+            SceneManager.LoadScene("VillageScene");
+        }
     }
 }

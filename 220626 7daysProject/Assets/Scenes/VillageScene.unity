@@ -1016,7 +1016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc79492ee0f8fe43a36f6cce04be181, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialScenePortal: {fileID: 2030892056}
+  dialogueManager: {fileID: 1261899626}
 --- !u!1 &346018435
 GameObject:
   m_ObjectHideFlags: 0
@@ -5426,6 +5426,7 @@ MonoBehaviour:
   characterNameText: {fileID: 2130730477}
   dialogueText: {fileID: 2050651036}
   screenTouchCanvas: {fileID: 458802391}
+  nowDialogueIndex: 0
   isDialogueStart: 0
 --- !u!4 &1261899627
 Transform:
@@ -6085,6 +6086,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee606ad5e031e34187200a2d76c5dff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tutorialPuzzleManager: {fileID: 0}
+  colObjectName: 
 --- !u!1 &1396027629
 GameObject:
   m_ObjectHideFlags: 0
@@ -10274,6 +10277,7 @@ GameObject:
   - component: {fileID: 1877895507}
   - component: {fileID: 1877895506}
   - component: {fileID: 1877895505}
+  - component: {fileID: 1877895509}
   m_Layer: 0
   m_Name: Portal
   m_TagString: Portal
@@ -10420,6 +10424,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1877895509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877895503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f10427a5302bf1d4ba89f8b23f778937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portalManager: {fileID: 339446984}
 --- !u!1 &1879567820
 GameObject:
   m_ObjectHideFlags: 0
@@ -11175,8 +11192,9 @@ GameObject:
   - component: {fileID: 2030892060}
   - component: {fileID: 2030892059}
   - component: {fileID: 2030892058}
+  - component: {fileID: 2030892062}
   m_Layer: 0
-  m_Name: TutorialScenePortal
+  m_Name: TutorialPortal
   m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11321,6 +11339,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2030892062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2030892056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f10427a5302bf1d4ba89f8b23f778937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  portalManager: {fileID: 339446984}
 --- !u!1 &2047847356
 GameObject:
   m_ObjectHideFlags: 0

@@ -99,18 +99,18 @@ public class ActionManager : MonoBehaviour
 
     void SetTutorialQuest()
     {
-        SaveData getSaveData = GameManager.singleton.saveData;
         QuestSaveData getQuestSaveData = GameManager.singleton.questSaveData;
-        getSaveData.isPuzzleStart[0] = true;
-        getQuestSaveData.questNameText = "촌장님의 술 가져오기";
+        GameManager.singleton.saveData.isPuzzleStart[0] = true;
+
         getQuestSaveData.questGoal = 1;
-        getQuestSaveData.questGoalText = "술 : " + getQuestSaveData.nowGetCount + "/" + getQuestSaveData.questGoal;
+        getQuestSaveData.SetGoalText("촌장님의 술 가져오기", "술 : ");
 
         questPrefab.SetActive(true);
         questNameText.text = getQuestSaveData.questNameText;
         questGoalText.text = getQuestSaveData.questGoalText;
 
-        jsonManager.SaveJson(getQuestSaveData, "questSaveData");
-        jsonManager.SaveJson(getSaveData, "saveData");
+        GameManager.singleton.questSaveData = getQuestSaveData;
+
+        GameManager.singleton.SaveNowData();
     }
 }

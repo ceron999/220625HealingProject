@@ -6,15 +6,19 @@ using UnityEngine.UI;
 public class PuzzleManagerParent : MonoBehaviour
 {
     [SerializeField]
-    GameObject prefabsCanvas;
+    protected DialogueManager dialogueManager;
     [SerializeField]
-    GameObject dialoguePrefab;
+    protected GameObject prefabsCanvas;
     [SerializeField]
-    GameObject questPrefab;
+    protected GameObject dialoguePrefab;
     [SerializeField]
-    Text questNameText;
+    protected GameObject questPrefab;
     [SerializeField]
-    Text questGoalText;
+    protected Text questNameText;
+    [SerializeField]
+    protected Text questGoalText;
+
+    public string getColObjectName;
 
     void Start()
     {

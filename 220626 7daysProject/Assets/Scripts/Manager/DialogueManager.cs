@@ -11,8 +11,7 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] 
     DialogueWrapper dialogueWrapper;
-    [SerializeField]
-    string dialogueWrapperName;
+    public string dialogueWrapperName;
 
     [SerializeField] 
     GameObject dialoguePrefab;
@@ -24,6 +23,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField]
     GameObject screenTouchCanvas;
 
+    [SerializeField]
     int nowDialogueIndex;
     bool isSkip = false;
     public bool isDialogueStart = false;
@@ -59,6 +59,20 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public void LoadDialogue(string getDialogueName)
+    {
+        if (dialoguePrefab.activeSelf == false)
+        {
+            dialogueWrapperName = getDialogueName;
+            dialogueWrapper = jsonManager.ResourceDataLoad<DialogueWrapper>(dialogueWrapperName);
+            dialogueWrapper.Parse();
+            dialoguePrefab.SetActive(true);
+            SetScreenTouchCanvas(true);
+            isDialogueStart = true;
+            ScreenTouchEvent();
+        }
+    }
+
     void SetScreenTouchCanvas(bool active)
     {
         screenTouchCanvas.SetActive(active);
@@ -66,7 +80,7 @@ public class DialogueManager : MonoBehaviour
 
     public void ScreenTouchEvent()
     {
-        if (!isDialogueEnd)
+        if (!isDialogueEnd && dialogueWrapper != null)
             PrintDialogue();
     }
 
@@ -76,6 +90,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (nowDialogueIndex == dialogueWrapper.dialogueArray.Length)
             {
+                Debug.Log("DialogueEnd");
                 SetScreenTouchCanvas(false);
                 DialoguePrefabToggle(false);
                 isDialogueEnd = true;
@@ -83,11 +98,16 @@ public class DialogueManager : MonoBehaviour
 
                 if (actionManager.GetMirIsAction()) 
                     actionManager.ControlMirAction(false);
+
+                nowDialogueIndex = 0;
+                dialogueWrapper = null;
+                dialogueWrapperName = "";
             }
 
             if (nowDialogueIndex < dialogueWrapper.dialogueArray.Length)
             {
                 Dialogue nowDialogue = dialogueWrapper.dialogueArray[nowDialogueIndex];
+                Debug.Log("PrintDialog: " + nowDialogueIndex + "/" + dialogueWrapper.dialogueArray.Length);
 
                 //타입에 따라 대화창을 껏다 킴.
                 if (nowDialogue.type == Types.Null)
@@ -98,6 +118,8 @@ public class DialogueManager : MonoBehaviour
                         actionManager.SetAction(nowDialogue);
 
                     nowDialogueIndex++;
+                    if (nowDialogueIndex == dialogueWrapper.dialogueArray.Length)
+                        PrintDialogue();
                     return;
                 }
                 else if (nowDialogue.type == Types.Dialog)
@@ -155,33 +177,41 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator SkipDialogue()
     {
-        if (!isSkip)
+        if (dialogueWrapper != null)
         {
-            if (dialogueWrapper.dialogueArray[nowDialogueIndex - 1].action != Actions.Null)
-                actionManager.SetAction(dialogueWrapper.dialogueArray[nowDialogueIndex - 1]);
-
-            if (nowDialogueIndex >= dialogueWrapper.dialogueArray.Length)
+            if (!isSkip)
             {
-                SetScreenTouchCanvas(false);
-                dialoguePrefab.SetActive(false);
-                isDialogueEnd = true;
-                isDialogueStart = false;
-                actionManager.ControlMirAction(false);
-            }
+                if (dialogueWrapper.dialogueArray[nowDialogueIndex - 1].action != Actions.Null)
+                    actionManager.SetAction(dialogueWrapper.dialogueArray[nowDialogueIndex - 1]);
 
-            if (nowDialogueIndex < dialogueWrapper.dialogueArray.Length)
-            {
-                isSkip = true;
-                isDialoguePrinting = false;
-                StopCoroutine(nowCoroutine);
-                Debug.Log(nowDialogueIndex);
-                characterNameText.text = dialogueWrapper.dialogueArray[nowDialogueIndex - 1].characterName;
-                dialogueText.text = dialogueWrapper.dialogueArray[nowDialogueIndex - 1].dialogue;
+                if (nowDialogueIndex >= dialogueWrapper.dialogueArray.Length)
+                {
+                    Debug.Log("Skip Final : " + nowDialogueIndex +"/" + dialogueWrapper.dialogueArray.Length);
+                    SetScreenTouchCanvas(false);
+                    dialoguePrefab.SetActive(false);
+                    isDialogueEnd = true;
+                    isDialogueStart = false;
+                    actionManager.ControlMirAction(false);
+
+                    nowDialogueIndex = 0;
+                    dialogueWrapper = null;
+                    dialogueWrapperName = "";
+                }
+
+                if (nowDialogueIndex < dialogueWrapper.dialogueArray.Length)
+                {
+                    isSkip = true;
+                    isDialoguePrinting = false;
+                    StopCoroutine(nowCoroutine);
+                    Debug.Log(nowDialogueIndex + "/" + dialogueWrapper.dialogueArray.Length);
+                    characterNameText.text = dialogueWrapper.dialogueArray[nowDialogueIndex - 1].characterName;
+                    dialogueText.text = dialogueWrapper.dialogueArray[nowDialogueIndex - 1].dialogue;
 
 
-                yield return new WaitForSeconds(0.1f);
-                nowDialogueIndex++;
-                isSkip = false;
+                    yield return new WaitForSeconds(0.1f);
+                    nowDialogueIndex++;
+                    isSkip = false;
+                }
             }
         }
     }

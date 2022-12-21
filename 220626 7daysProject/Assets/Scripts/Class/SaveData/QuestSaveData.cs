@@ -20,4 +20,11 @@ public class QuestSaveData
         questGoal = 0;
         isNowQuestClear = false;
     }
+
+    public void SetGoalText(string getQuestName, string getQuestGoal)
+    {
+        questNameText = getQuestName;
+
+        questGoalText = getQuestGoal + nowGetCount + "/" + questGoal;
+    }
 }

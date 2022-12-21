@@ -12,9 +12,6 @@ public class GameManager : MonoBehaviour
     public SaveData saveData;
 
     public string setDialogueName;
-    //temp
-    public bool isTutorialGoalClear = false;
-    public bool isTutorialClear = false;
 
     void Awake()
     {
@@ -39,5 +36,12 @@ public class GameManager : MonoBehaviour
         saveData = new SaveData();
         questSaveData = new QuestSaveData();
         jsonManager.SaveJson(saveData, "saveData");
+        jsonManager.SaveJson(questSaveData, "questSaveData");
+    }
+
+    public void SaveNowData()
+    {
+        jsonManager.SaveJson(saveData, "saveData");
+        jsonManager.SaveJson(questSaveData, "questSaveData");
     }
 }

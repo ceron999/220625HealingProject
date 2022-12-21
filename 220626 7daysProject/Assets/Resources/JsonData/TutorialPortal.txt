@@ -1,0 +1,10 @@
+{
+	"dialogueArray":
+		[
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"촌장님의 술을 가져와야 해."
+			}
+		]
+}

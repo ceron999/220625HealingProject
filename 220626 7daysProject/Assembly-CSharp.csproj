@@ -59,6 +59,7 @@
     <Compile Include="Assets\Scripts\Manager\OldDialogue\CsvDialogues\CsvDialogueManager.cs" />
     <Compile Include="Assets\Scripts\UI\MainSceneBTN.cs" />
     <Compile Include="Assets\Scripts\Manager\OldDialogue\CsvDialogues\CsvDialogueParser.cs" />
+    <Compile Include="Assets\Scripts\Manager\TutorialPuzzleManager.cs" />
     <Compile Include="Assets\Scripts\Manager\JsonManager.cs" />
     <Compile Include="Assets\Scripts\Manager\OldDialogue\CsvDialogues\CsvDataBaseManager.cs" />
     <Compile Include="Assets\Scripts\Class\SaveData\SaveData.cs" />
@@ -66,18 +67,18 @@
     <Compile Include="Assets\Scripts\OldScript\temp.cs" />
     <Compile Include="Assets\Scripts\UI\OldScript\MoveUI.cs" />
     <Compile Include="Assets\Scripts\Manager\ActionManager.cs" />
+    <Compile Include="Assets\Scripts\Class\SaveData\QuestSaveData.cs" />
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
     <Compile Include="Assets\Scripts\Manager\OldDialogue\CsvDialogues\CsvDialogue.cs" />
     <Compile Include="Assets\Scripts\Manager\BtnManager.cs" />
-    <Compile Include="Assets\Scripts\Class\MirMove.cs" />
+    <Compile Include="Assets\Scripts\Class\Player\MirMove.cs" />
+    <Compile Include="Assets\Scripts\Manager\PuzzleManagerParent.cs" />
     <Compile Include="Assets\Scripts\UI\OldScript\ActionUI.cs" />
     <Compile Include="Assets\Scripts\Manager\DialogueManager.cs" />
     <Compile Include="Assets\Scripts\Class\Dialogue\DialogueWrapper.cs" />
     <Compile Include="Assets\Scripts\Class\Dialogue\Dialogue.cs" />
-    <Compile Include="Assets\Scripts\Class\AttackCollider.cs" />
-    <Compile Include="Assets\Scripts\Class\SaveData\QuestSaveData.cs" />
-    <Compile Include="Assets\Scripts\Manager\PuzzleManagerParent.cs" />
-    <Compile Include="Assets\Scripts\Manager\TutorialPuzzleManager.cs" />
+    <Compile Include="Assets\Scripts\Class\Player\AttackCollider.cs" />
+    <Compile Include="Assets\Scripts\Class\Portal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Craftpix\craftpix-891178-free-3-character-sprite-sheets-pixel-art\license.txt" />
@@ -85,6 +86,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Craftpix\craftpix-981000-blacksmith-craft-asset-pixel-art-pack\License.txt" />
     <None Include="Assets\Craftpix\craftpix-981000-blacksmith-craft-asset-pixel-art-pack\Font.txt" />
+    <None Include="Assets\Resources\JsonData\TutorialFakeChest.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
@@ -98,6 +100,7 @@
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\Resources\JsonData\TutorialPortal.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
