@@ -28,7 +28,7 @@ public class DialogueManager : MonoBehaviour
     bool isSkip = false;
     public bool isDialogueStart = false;
     bool isDialoguePrinting = false;
-    bool isDialogueEnd = false;
+    [SerializeField] bool isDialogueEnd = false;
     Coroutine nowCoroutine;
 
 
@@ -47,7 +47,10 @@ public class DialogueManager : MonoBehaviour
             dialogueWrapper.Parse();
 
             ScreenTouchEvent();
+            return;
         }
+
+        actionManager.SetPlayerCamera();
     }
 
     //for Developer
@@ -55,20 +58,23 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space) && isDialogueStart)
         {
-            StartCoroutine(SkipDialogue());
+            SkipDialogue();
         }
     }
 
     public void LoadDialogue(string getDialogueName)
     {
+        if (isDialogueStart)
+        {
+            Debug.Log("dialogue 시작했으므로 패스");
+            return;
+        }
         if (dialoguePrefab.activeSelf == false)
         {
             dialogueWrapperName = getDialogueName;
             dialogueWrapper = jsonManager.ResourceDataLoad<DialogueWrapper>(dialogueWrapperName);
             dialogueWrapper.Parse();
-            dialoguePrefab.SetActive(true);
-            SetScreenTouchCanvas(true);
-            isDialogueStart = true;
+
             ScreenTouchEvent();
         }
     }
@@ -82,6 +88,15 @@ public class DialogueManager : MonoBehaviour
     {
         if (!isDialogueEnd && dialogueWrapper != null)
             PrintDialogue();
+
+        else if(isDialogueEnd)
+        {
+            if (dialogueWrapper == null)
+                return;
+
+            isDialogueEnd = false;
+            PrintDialogue();
+        }
     }
 
     void PrintDialogue()
@@ -102,6 +117,7 @@ public class DialogueManager : MonoBehaviour
                 nowDialogueIndex = 0;
                 dialogueWrapper = null;
                 dialogueWrapperName = "";
+                return;
             }
 
             if (nowDialogueIndex < dialogueWrapper.dialogueArray.Length)
@@ -112,6 +128,7 @@ public class DialogueManager : MonoBehaviour
                 //타입에 따라 대화창을 껏다 킴.
                 if (nowDialogue.type == Types.Null)
                 {
+                    Debug.Log("dialogue 타입이 null임");
                     SetScreenTouchCanvas(false);
                     DialoguePrefabToggle(false);
                     if(nowDialogue.action != Actions.Null)
@@ -124,6 +141,7 @@ public class DialogueManager : MonoBehaviour
                 }
                 else if (nowDialogue.type == Types.Dialog)
                 {
+                    Debug.Log("dialogue prefab 킴");
                     DialoguePrefabToggle(true);
                     SetScreenTouchCanvas(true);
                 }
@@ -173,20 +191,20 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = nowDialogue.dialogue;
 
         isDialoguePrinting = false;
-    }    
-
-    IEnumerator SkipDialogue()
+    }  
+    
+    void SkipDialogue()
     {
-        if (dialogueWrapper != null)
+        if(dialogueWrapper != null)
         {
-            if (!isSkip)
+            if(!isSkip)
             {
                 if (dialogueWrapper.dialogueArray[nowDialogueIndex - 1].action != Actions.Null)
                     actionManager.SetAction(dialogueWrapper.dialogueArray[nowDialogueIndex - 1]);
 
                 if (nowDialogueIndex >= dialogueWrapper.dialogueArray.Length)
                 {
-                    Debug.Log("Skip Final : " + nowDialogueIndex +"/" + dialogueWrapper.dialogueArray.Length);
+                    Debug.Log("Skip Final : " + nowDialogueIndex + "/" + dialogueWrapper.dialogueArray.Length);
                     SetScreenTouchCanvas(false);
                     dialoguePrefab.SetActive(false);
                     isDialogueEnd = true;
@@ -196,23 +214,29 @@ public class DialogueManager : MonoBehaviour
                     nowDialogueIndex = 0;
                     dialogueWrapper = null;
                     dialogueWrapperName = "";
+                    return;
                 }
 
-                if (nowDialogueIndex < dialogueWrapper.dialogueArray.Length)
-                {
-                    isSkip = true;
-                    isDialoguePrinting = false;
-                    StopCoroutine(nowCoroutine);
-                    Debug.Log(nowDialogueIndex + "/" + dialogueWrapper.dialogueArray.Length);
-                    characterNameText.text = dialogueWrapper.dialogueArray[nowDialogueIndex - 1].characterName;
-                    dialogueText.text = dialogueWrapper.dialogueArray[nowDialogueIndex - 1].dialogue;
-
-
-                    yield return new WaitForSeconds(0.1f);
-                    nowDialogueIndex++;
-                    isSkip = false;
-                }
+                StartCoroutine(SkipDialogueCoroutine());
             }
+        }
+    }
+
+    IEnumerator SkipDialogueCoroutine()
+    {
+        if (nowDialogueIndex < dialogueWrapper.dialogueArray.Length)
+        {
+            isSkip = true;
+            isDialoguePrinting = false;
+            StopCoroutine(nowCoroutine);
+            Debug.Log(nowDialogueIndex + "/" + dialogueWrapper.dialogueArray.Length);
+            characterNameText.text = dialogueWrapper.dialogueArray[nowDialogueIndex - 1].characterName;
+            dialogueText.text = dialogueWrapper.dialogueArray[nowDialogueIndex - 1].dialogue;
+
+
+            yield return new WaitForSeconds(0.1f);
+            nowDialogueIndex++;
+            isSkip = false;
         }
     }
 

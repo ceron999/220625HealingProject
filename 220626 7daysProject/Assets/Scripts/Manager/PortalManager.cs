@@ -9,6 +9,7 @@ public class PortalManager : MonoBehaviour
     DialogueManager dialogueManager;
 
 
+
     public void MoveScene(string getPortalName)
     {
         switch(getPortalName)
@@ -17,6 +18,7 @@ public class PortalManager : MonoBehaviour
                 SceneManager.LoadScene("TutorialScene");
                 break;
             case "TutorialEndPortal":
+                Debug.Log("TutorialEndPortal");
                 UseTutorialEndPortal();
                 break;
         }
@@ -24,7 +26,7 @@ public class PortalManager : MonoBehaviour
 
     void UseTutorialEndPortal()
     {
-        if (!GameManager.singleton.questSaveData.isNowQuestClear && dialogueManager.dialogueWrapperName == "")
+        if (!GameManager.singleton.questSaveData.isNowQuestClear)
         {
             dialogueManager.LoadDialogue("TutorialPortal");
             Debug.Log("아직 게임 못깸");

@@ -81,6 +81,13 @@ public class ActionManager : MonoBehaviour
         dialogueManager.isDialogueStart = true;
     }
 
+    public void SetPlayerCamera()
+    {
+        playerCamera.enabled = true;
+        directingCamera.enabled = false;
+        mainCamera = playerCamera;
+    }
+
     void SetMainCamera(Camera getMainCamera)
     {
         if(getMainCamera == playerCamera)
