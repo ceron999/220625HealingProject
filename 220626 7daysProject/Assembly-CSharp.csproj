@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Manager\ActionManager.cs" />
     <Compile Include="Assets\Scripts\Class\SaveData\QuestSaveData.cs" />
     <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
+    <Compile Include="Assets\Scripts\Class\Portal.cs" />
     <Compile Include="Assets\Scripts\Manager\OldDialogue\CsvDialogues\CsvDialogue.cs" />
     <Compile Include="Assets\Scripts\Manager\BtnManager.cs" />
     <Compile Include="Assets\Scripts\Class\Player\MirMove.cs" />
@@ -78,7 +79,6 @@
     <Compile Include="Assets\Scripts\Class\Dialogue\DialogueWrapper.cs" />
     <Compile Include="Assets\Scripts\Class\Dialogue\Dialogue.cs" />
     <Compile Include="Assets\Scripts\Class\Player\AttackCollider.cs" />
-    <Compile Include="Assets\Scripts\Class\Portal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Craftpix\craftpix-891178-free-3-character-sprite-sheets-pixel-art\license.txt" />
@@ -93,8 +93,10 @@
     <None Include="Assets\Resources\JsonData\TutorialStart.txt" />
     <None Include="Assets\Craftpix\craftpix-891178-free-3-character-sprite-sheets-pixel-art\Font.txt" />
     <None Include="Assets\Craftpix\craftpix-785613-cookery-game-assets-pixel-art-pack\Font.txt" />
+    <None Include="Assets\Resources\JsonData\TutorialRealChestOpen.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\Craftpix\craftpix-781162-simple-platformer-tileset-pixel-art\Font.txt" />
+    <None Include="Assets\Resources\JsonData\TutorialFakeChestOpen.txt" />
     <None Include="Assets\Resources\JsonData\TestJsonData.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />

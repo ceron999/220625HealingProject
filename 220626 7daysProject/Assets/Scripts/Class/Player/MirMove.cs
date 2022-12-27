@@ -18,9 +18,13 @@ public class MirMove : MonoBehaviour
 
     public bool isAction = false;
 
-    public float maxSpeed;   //최대 속도
+    [SerializeField]
+    float maxSpeed;   //최대 속도
+    [SerializeField]
+    float maxJump;
     public float moveDirection;                        //Mir의 이동 방향을 정하는 변수
     public float jumpPower;
+    bool isMove = false;
     bool isJump = false;
 
     int tileLayer = 1 << 6; // tile의 레이어 = 6
@@ -89,6 +93,7 @@ public class MirMove : MonoBehaviour
     public void Move()
     {
         moveDirection = Input.GetAxisRaw("Horizontal");
+        isMove = true;
 
         mirRigid.AddForce(Vector2.right * moveDirection, ForceMode2D.Impulse);
 
@@ -106,6 +111,7 @@ public class MirMove : MonoBehaviour
         {
             mirRigid.velocity = new Vector2(0, mirRigid.velocity.y);
             mirAnimator.SetBool("mirIsMove", false);
+            isMove = false;
         }
 
         if (mirRigid.velocity.x >= maxSpeed)
@@ -135,6 +141,22 @@ public class MirMove : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C) && !isJump)
         {
             mirRigid.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
+            if (mirRigid.velocity.y >= maxJump)
+                mirRigid.velocity = new Vector2(mirRigid.velocity.x, maxJump);
+        }
+
+        if (isJump && !isMove)
+        {
+            hit = Physics2D.Raycast(mirRigid.position, Vector2.down, 0.7f, tileLayer);
+            if (hit.collider != null)
+            {
+                return;
+            }
+            
+            if (mirRigid.velocity.y > 0.5)
+            {
+                mirRigid.velocity = new Vector2(mirRigid.velocity.x, 0);
+            }
         }
     }
     
