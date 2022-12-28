@@ -4,7 +4,20 @@
 			{
 				"typeString":"Dialog",
 				"characterName":"미르",
-				"dialogue":"열쇠가 필요해"
+				"dialogue":"음?"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"뭐야, 가짜 상자였짆아."
+			},
+			{
+				"actionString":"OpenSound"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"출발 지점에서 무슨 소리가 들렸어."
 			}
 		]
 }

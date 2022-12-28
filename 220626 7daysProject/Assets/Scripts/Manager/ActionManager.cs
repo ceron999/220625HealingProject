@@ -47,6 +47,10 @@ public class ActionManager : MonoBehaviour
                 Debug.Log("GetTutorialQuest");
                 SetTutorialQuest();
                 break;
+            case Actions.OpenSound:
+                Debug.Log("OpenSound");
+                break;
+
         }
     }
     public bool GetMirIsAction()
@@ -119,5 +123,10 @@ public class ActionManager : MonoBehaviour
         GameManager.singleton.questSaveData = getQuestSaveData;
 
         GameManager.singleton.SaveNowData();
+    }
+
+    void OpenSound()
+    {
+
     }
 }

@@ -8,6 +8,8 @@ public class PuzzleManagerParent : MonoBehaviour
     [SerializeField]
     protected DialogueManager dialogueManager;
     [SerializeField]
+    protected ActionManager actionManager;
+    [SerializeField]
     protected GameObject prefabsCanvas;
     [SerializeField]
     protected GameObject dialoguePrefab;

@@ -10,7 +10,7 @@ public enum Types
 
 public enum Actions
 {
-    Null, GoToOldMan, GetTutorialQuest
+    Null, GoToOldMan, GetTutorialQuest, OpenSound
 }
 
 [System.Serializable]

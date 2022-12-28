@@ -1,7 +1,7 @@
 {
     "questNameText": "촌장님의 술 가져오기",
-    "questGoalText": "술 : 1/1",
-    "nowGetCount": 1,
+    "questGoalText": "술 : 0/1",
+    "nowGetCount": 0,
     "questGoal": 1,
-    "isNowQuestClear": true
+    "isNowQuestClear": false
 }

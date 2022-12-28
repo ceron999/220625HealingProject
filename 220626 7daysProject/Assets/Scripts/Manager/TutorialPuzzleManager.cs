@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TutorialPuzzleManager : PuzzleManagerParent
 {
@@ -16,6 +17,10 @@ public class TutorialPuzzleManager : PuzzleManagerParent
     Animator realChestAnimator;
     [SerializeField]
     GameObject fakeTile;
+
+    [SerializeField]
+    Image drinkImage;
+
 
     bool isKeyGet = false;
     bool isFakeChestOpen = false;
@@ -49,16 +54,9 @@ public class TutorialPuzzleManager : PuzzleManagerParent
 
     void OpenFakeChest()
     {
-        if(isKeyGet)
+        if (isKeyGet)
         {
-            //Chest open
-            fakeChestAnimator = tutorialFakeChest.GetComponent<Animator>();
-            fakeChestAnimator.SetBool("isOpen", true);
-            isFakeChestOpen = true;
-
-            //가짜 타일 사라지기 전 혼잣말
-            fakeTile.SetActive(false);
-            tutorialRealChest.SetActive(true);
+            StartCoroutine(OpenFakeChestCoroutine());
         }
         else
         {
@@ -66,16 +64,33 @@ public class TutorialPuzzleManager : PuzzleManagerParent
         }
     }
 
+    IEnumerator OpenFakeChestCoroutine()
+    {
+        actionManager.ControlMirAction(true);
+        //Chest open
+        fakeChestAnimator = tutorialFakeChest.GetComponent<Animator>();
+        fakeChestAnimator.SetBool("isOpen", true);
+        isFakeChestOpen = true;
+
+        fakeTile.SetActive(false);
+        tutorialRealChest.SetActive(true);
+
+        yield return new WaitForSeconds(1.0f);
+        dialogueManager.LoadDialogue("TutorialFakeChestOpen");
+    }
+
     void OpenRealChest()
     {
         if(isKeyGet && isFakeChestOpen)
         {
+            actionManager.ControlMirAction(true);
             //Chest open
             realChestAnimator = tutorialRealChest.GetComponent<Animator>();
             realChestAnimator.SetBool("isOpen", true);
             isRealChestActive = true;
 
             //술 얻음
+            StartCoroutine(GetDrink());
 
             GameManager.singleton.questSaveData.nowGetCount++;
             GameManager.singleton.questSaveData.isNowQuestClear = true;
@@ -84,5 +99,42 @@ public class TutorialPuzzleManager : PuzzleManagerParent
 
             questGoalText.text = GameManager.singleton.questSaveData.questGoalText;
         }
+    }
+
+    IEnumerator FadeDrinkImage()
+    {
+        drinkImage.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1.0f);
+
+        float fadeFloat = 0;
+
+        while (fadeFloat <= 1)
+        {
+            fadeFloat += 0.05f;
+            drinkImage.color = new Color(255, 255, 255, fadeFloat);
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        //임시로 만듬
+        while (Input.GetMouseButtonDown(0))
+        {
+            yield return null;
+        }
+
+        while (fadeFloat >= 0)
+        {
+            fadeFloat -= 0.05f;
+            drinkImage.color = new Color(255, 255, 255, fadeFloat);
+            yield return new WaitForSeconds(0.1f);
+        }
+
+        drinkImage.gameObject.SetActive(false);
+    }
+
+    IEnumerator GetDrink()
+    {
+        yield return StartCoroutine(FadeDrinkImage());
+
+        dialogueManager.LoadDialogue("TutorialRealChestOpen");
     }
 }
