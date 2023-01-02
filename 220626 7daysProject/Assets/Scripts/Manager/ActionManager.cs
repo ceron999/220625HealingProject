@@ -29,6 +29,8 @@ public class ActionManager : MonoBehaviour
     GameObject oldMan;
     MirMove mirMoveData;
 
+    public bool isActionPlaying = false;
+
     void Start()
     {
         jsonManager = new JsonManager();
@@ -62,6 +64,10 @@ public class ActionManager : MonoBehaviour
     public void ControlMirAction(bool active)
     {
         mirMoveData.isAction = active;
+
+        //미르 움직임이 멈추면서 콜라이더가 켜진 상태로 유지되는 현상 수정
+        if (mirMoveData.mirAttackRange.activeSelf == true)
+            mirMoveData.mirAttackRange.SetActive(false);
     }
 
     //Action Functions
@@ -84,6 +90,7 @@ public class ActionManager : MonoBehaviour
         dialogueManager.DialoguePrefabToggle(true);
         dialogueManager.ScreenTouchEvent();
         dialogueManager.isDialogueStart = true;
+        isActionPlaying = false;
     }
 
     public void SetPlayerCamera()
@@ -97,13 +104,17 @@ public class ActionManager : MonoBehaviour
     {
         if(getMainCamera == playerCamera)
         {
+            playerCamera.gameObject.SetActive(true);
             playerCamera.enabled = true;
             directingCamera.enabled = false;
+            directingCamera.gameObject.SetActive(false);
             mainCamera = playerCamera;
         }
         else
         {
+            playerCamera.gameObject.SetActive(false);
             playerCamera.enabled = false;
+            directingCamera.gameObject.SetActive(true);
             directingCamera.enabled = true;
             mainCamera = directingCamera;
         }
@@ -124,6 +135,7 @@ public class ActionManager : MonoBehaviour
         GameManager.singleton.questSaveData = getQuestSaveData;
 
         GameManager.singleton.SaveNowData();
+        isActionPlaying = false;
     }
 
     IEnumerator OpenSound()
@@ -132,5 +144,6 @@ public class ActionManager : MonoBehaviour
 
         yield return new WaitForSeconds(1);
         dialogueManager.ScreenTouchEvent();
+        isActionPlaying = false;
     }
 }

@@ -4,7 +4,12 @@
 			{
 				"typeString":"Dialog",
 				"characterName":"미르",
-				"dialogue":"열쇠가 필요해"
+				"dialogue":"찾았다!"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"이제 술을 가져다 드리자."
 			}
 		]
 }

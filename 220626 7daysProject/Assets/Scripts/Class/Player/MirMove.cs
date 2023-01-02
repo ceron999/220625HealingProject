@@ -13,8 +13,7 @@ public class MirMove : MonoBehaviour
     Rigidbody2D mirRigid;
     SpriteRenderer mirSpriteRenderer;
     Animator mirAnimator;
-    [SerializeField] 
-    GameObject mirAttackRange;
+    public GameObject mirAttackRange;
 
     public bool isAction = false;
 
@@ -45,6 +44,10 @@ public class MirMove : MonoBehaviour
             Move();   //이동 버튼이 눌려있다면 Mir가 움직인다.
             Jump();
             Attack();
+        }
+        else
+        {
+            moveDirection = 0;
         }
     }
 

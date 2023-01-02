@@ -1623,7 +1623,7 @@ RectTransform:
   m_Children:
   - {fileID: 1762268553}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -4525,7 +4525,7 @@ Transform:
   m_Children:
   - {fileID: 1819101767}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1839735485 &1186100404
 Tilemap:
@@ -4830,7 +4830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1202148352
 AudioListener:
   m_ObjectHideFlags: 0
@@ -4895,7 +4895,7 @@ Transform:
   m_Children:
   - {fileID: 1191307606}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1205806181
 GameObject:
@@ -13585,7 +13585,7 @@ PrefabInstance:
     - target: {fileID: 2601142198420898185, guid: 58304cb0011109b419ce455ef9f33e49,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2601142198420898185, guid: 58304cb0011109b419ce455ef9f33e49,
         type: 3}
@@ -13755,7 +13755,7 @@ PrefabInstance:
     - target: {fileID: 6509679276201146627, guid: 6c0b8d9e05676a74998ce04d6f6c77ab,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6509679276201146627, guid: 6c0b8d9e05676a74998ce04d6f6c77ab,
         type: 3}

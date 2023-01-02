@@ -67,6 +67,7 @@ public class TutorialPuzzleManager : PuzzleManagerParent
     IEnumerator OpenFakeChestCoroutine()
     {
         actionManager.ControlMirAction(true);
+        
         //Chest open
         fakeChestAnimator = tutorialFakeChest.GetComponent<Animator>();
         fakeChestAnimator.SetBool("isOpen", true);
