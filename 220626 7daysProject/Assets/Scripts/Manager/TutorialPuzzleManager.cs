@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -96,7 +97,7 @@ public class TutorialPuzzleManager : PuzzleManagerParent
             GameManager.singleton.questSaveData.nowGetCount++;
             GameManager.singleton.questSaveData.isNowQuestClear = true;
             GameManager.singleton.questSaveData.SetGoalText("촌장님의 술 가져오기", "술 : ");
-
+            GameManager.singleton.saveData.isPuzzleClear[0] = true;
 
             questGoalText.text = GameManager.singleton.questSaveData.questGoalText;
         }

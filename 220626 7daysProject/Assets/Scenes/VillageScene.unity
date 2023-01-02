@@ -6143,6 +6143,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 1261899626}
+  tutorialPortalTransform: {fileID: 2030892057}
+  portalTransform: {fileID: 1877895504}
   playerCamera: {fileID: 1055103325}
   directingCamera: {fileID: 1202148353}
   mainCamera: {fileID: 0}
@@ -6151,6 +6153,7 @@ MonoBehaviour:
   questGoalText: {fileID: 1726305578}
   mir: {fileID: 612745470}
   oldMan: {fileID: 293495598}
+  isActionPlaying: 0
 --- !u!1 &1518093891
 GameObject:
   m_ObjectHideFlags: 0

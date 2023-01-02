@@ -10,6 +10,11 @@ public class ActionManager : MonoBehaviour
     DialogueManager dialogueManager;
 
     [SerializeField]
+    Transform tutorialPortalTransform;
+    [SerializeField]
+    Transform portalTransform;
+
+    [SerializeField]
     Camera playerCamera;
     [SerializeField]
     Camera directingCamera;
@@ -35,6 +40,30 @@ public class ActionManager : MonoBehaviour
     {
         jsonManager = new JsonManager();
         mirMoveData = mir.GetComponent<MirMove>();
+
+        SetMirPosition();
+    }
+
+    void SetMirPosition()
+    {
+        if (GameManager.singleton.questSaveData.isNowQuestClear == true)
+        {
+            //튜토 클리어할 경우
+            if (GameManager.singleton.saveData.isPuzzleClear[0])
+                mir.transform.position = tutorialPortalTransform.position;
+            else if(GameManager.singleton.saveData.isPuzzleClear[1])
+            {
+
+            }
+            else if (GameManager.singleton.saveData.isPuzzleClear[2])
+            {
+
+            }
+            else if (GameManager.singleton.saveData.isPuzzleClear[3])
+            {
+
+            }
+        }
     }
 
     public void SetAction(Dialogue nowDialogue)
