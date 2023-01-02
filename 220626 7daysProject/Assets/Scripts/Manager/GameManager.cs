@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
         saveData = jsonManager.LoadSaveData();
     }
 
-    //ÏÑ∏Ïù¥Î∏åÎç∞Ïù¥ÌÑ∞ ÎÇ†Î¶¨Í∏∞
+    //ºº¿Ã∫Íµ•¿Ã≈Õ ≥Ø∏Æ±‚
     public void SetSaveDataClear()
     {
         saveData = new SaveData();

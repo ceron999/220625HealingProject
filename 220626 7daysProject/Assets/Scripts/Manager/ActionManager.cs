@@ -49,6 +49,7 @@ public class ActionManager : MonoBehaviour
                 break;
             case Actions.OpenSound:
                 Debug.Log("OpenSound");
+                StartCoroutine(OpenSound());
                 break;
 
         }
@@ -125,8 +126,11 @@ public class ActionManager : MonoBehaviour
         GameManager.singleton.SaveNowData();
     }
 
-    void OpenSound()
+    IEnumerator OpenSound()
     {
+        //뭔가 열리는 소리가 들림
 
+        yield return new WaitForSeconds(1);
+        dialogueManager.ScreenTouchEvent();
     }
 }
