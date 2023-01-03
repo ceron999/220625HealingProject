@@ -39,7 +39,7 @@ public class NpcCollider : MonoBehaviour
 
     void SetNpcDialogue()
     {
-        //Æ©Åä¸®¾ó ³¡³µÀ» ¶§
+        //íŠœí† ë¦¬ì–¼ ëë‚¬ì„ ë•Œ
         if (GameManager.singleton.saveData.isPuzzleClear[0] && GameManager.singleton.questSaveData.isNowQuestClear)
         {
             GameManager.singleton.ClearQuestData();

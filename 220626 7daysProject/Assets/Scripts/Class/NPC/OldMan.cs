@@ -32,13 +32,13 @@ public class OldMan : MonoBehaviour
 
         if (moveDirection == 1)
         {
-            oldManSpriteRenderer.flipX = false;    //Mir°¡ ¿À¸¥ÂÊÀ» ÃÄ´Ùº¸°Ô ÇÕ´Ï´Ù.
-            oldManAnimator.SetBool("oldManIsWalk", true); //Mir°¡ Move animationÀ» ½ÇÇàÇÕ´Ï´Ù.
+            oldManSpriteRenderer.flipX = false;    //Mirê°€ ì˜¤ë¥¸ìª½ì„ ì³ë‹¤ë³´ê²Œ í•©ë‹ˆë‹¤.
+            oldManAnimator.SetBool("oldManIsWalk", true); //Mirê°€ Move animationì„ ì‹¤í–‰í•©ë‹ˆë‹¤.
         }
         else if (moveDirection == -1)
         {
-            oldManSpriteRenderer.flipX = true;    //Mir°¡ ¿ŞÂÊÀ» ÃÄ´Ùº¸°Ô ÇÕ´Ï´Ù.
-            oldManAnimator.SetBool("oldManIsWalk", true); //Mir°¡ Move animationÀ» ½ÇÇàÇÕ´Ï´Ù.
+            oldManSpriteRenderer.flipX = true;    //Mirê°€ ì™¼ìª½ì„ ì³ë‹¤ë³´ê²Œ í•©ë‹ˆë‹¤.
+            oldManAnimator.SetBool("oldManIsWalk", true); //Mirê°€ Move animationì„ ì‹¤í–‰í•©ë‹ˆë‹¤.
         }
         else if (moveDirection == 0)
         {

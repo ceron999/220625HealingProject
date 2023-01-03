@@ -11,7 +11,7 @@ public enum Types
 public enum Actions
 {
     Null, GoToOldMan, GetTutorialQuest, OpenSound
-        , MoveToBakery, OldManDisappear, FindSound, OldManAppear, GetQuest1
+        , MoveToBakery, OldManDisappear, GetQuest1
 }
 
 [System.Serializable]

@@ -48,12 +48,6 @@
 				"actionString":"OldManDisappear"
 			},
 			{
-				"actionString":"FindSound"
-			},
-			{
-				"actionString":"OldManAppear"
-			},
-			{
 				"typeString":"Dialog",
 				"characterName":"촌장님",
 				"dialogue":"미르야...."

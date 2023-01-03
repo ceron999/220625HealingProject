@@ -16,6 +16,13 @@ public class ActionManager : MonoBehaviour
     Transform portalTransform;
 
     [SerializeField]
+    GameObject tutorialPortal;
+    [SerializeField]
+    GameObject storagePortal;
+    [SerializeField]
+    GameObject portal;
+
+    [SerializeField]
     Camera playerCamera;
     [SerializeField]
     Camera directingCamera;
@@ -29,7 +36,7 @@ public class ActionManager : MonoBehaviour
     [SerializeField]
     Text questGoalText;
 
-    [SerializeField] 
+    [SerializeField]
     GameObject mir;
     [SerializeField]
     GameObject oldMan;
@@ -45,17 +52,50 @@ public class ActionManager : MonoBehaviour
         jsonManager = new JsonManager();
         mirMoveData = mir.GetComponent<MirMove>();
 
+        SetPortalActive();
+        SetQuestPrefab();
         SetMirPosition();
     }
+    void SetPortalActive()
+    {
+        if (!GameManager.singleton.saveData.isPuzzleClear[0])
+        {
+            tutorialPortal.SetActive(true);
+        }
+        else if(!GameManager.singleton.saveData.isPuzzleClear[1])
+        {
+            storagePortal.SetActive(true);
+        }
+        else if(!GameManager.singleton.saveData.isPuzzleClear[2])
+        {
+            portal.SetActive(true);
+        }
+    }
 
+    //ë¡œë“œí•  ë•Œ í€˜ìŠ¤íŠ¸ ë‹¤ì‹œ ë³´ì—¬ì£¼ê¸° ìœ„í•´
+    void SetQuestPrefab()
+    {
+        int puzzleSize = GameManager.singleton.saveData.isPuzzleStart.Length;
+        for (int i = 0; i < puzzleSize; i++)
+            if (GameManager.singleton.saveData.isPuzzleStart[i])
+            {
+                questPrefab.SetActive(true);
+
+                questNameText.text = GameManager.singleton.questSaveData.questNameText;
+                questGoalText.text = GameManager.singleton.questSaveData.questGoalText;
+                break;
+            }
+    }
+
+    //ë¡œë“œë‚˜ ëŒì•„ì˜¬ ë•Œ ìœ„ì¹˜ ì„¤ì •
     void SetMirPosition()
     {
         if (GameManager.singleton.questSaveData.isNowQuestClear == true)
         {
-            //Æ©Åä Å¬¸®¾îÇÒ °æ¿ì
+            //íŠœí†  í´ë¦¬ì–´í•  ê²½ìš°
             if (GameManager.singleton.saveData.isPuzzleClear[0])
                 mir.transform.position = tutorialPortalTransform.position;
-            else if(GameManager.singleton.saveData.isPuzzleClear[1])
+            else if (GameManager.singleton.saveData.isPuzzleClear[1])
             {
 
             }
@@ -70,7 +110,7 @@ public class ActionManager : MonoBehaviour
         }
     }
 
-    //Äù ±ú°í ÃÊ±âÈ­ ½ÃÅ³ ¶§ ¾²·Á°í
+    //í€˜ ê¹¨ê³  ì´ˆê¸°í™” ì‹œí‚¬ ë•Œ ì“°ë ¤ê³ 
     public void ClearQuestPrefab()
     {
         questNameText.text = "";
@@ -103,15 +143,11 @@ public class ActionManager : MonoBehaviour
                 break;
             case Actions.OldManDisappear:
                 Debug.Log("OldManDisappear");
-                break;
-            case Actions.FindSound:
-                Debug.Log("FindSound");
-                break;
-            case Actions.OldManAppear:
-                Debug.Log("OldManAppear");
+                StartCoroutine(OldManDisappear());
                 break;
             case Actions.GetQuest1:
                 Debug.Log("GetQuest1");
+                GetQuest1();
                 break;
         }
     }
@@ -127,7 +163,7 @@ public class ActionManager : MonoBehaviour
 
         mirMoveData.isAction = active;
 
-        //¹Ì¸£ ¿òÁ÷ÀÓÀÌ ¸ØÃß¸é¼­ Äİ¶óÀÌ´õ°¡ ÄÑÁø »óÅÂ·Î À¯ÁöµÇ´Â Çö»ó ¼öÁ¤
+        //ë¯¸ë¥´ ì›€ì§ì„ì´ ë©ˆì¶”ë©´ì„œ ì½œë¼ì´ë”ê°€ ì¼œì§„ ìƒíƒœë¡œ ìœ ì§€ë˜ëŠ” í˜„ìƒ ìˆ˜ì •
         if (mirMoveData.mirAttackRange.activeSelf == true)
             mirMoveData.mirAttackRange.SetActive(false);
     }
@@ -137,7 +173,7 @@ public class ActionManager : MonoBehaviour
     {
         SetMainCamera(directingCamera);
         Transform dest = oldMan.transform;
-        //¹® ´İ°í ¹Ì¸£ µîÀå
+        //ë¬¸ ë‹«ê³  ë¯¸ë¥´ ë“±ì¥
         mir.SetActive(false);
         yield return new WaitForSeconds(0.5f);
 
@@ -145,7 +181,7 @@ public class ActionManager : MonoBehaviour
         mir.SetActive(true);
         ControlMirAction(true);
         yield return new WaitForSeconds(0.3f);
-        //¹Ì¸£°¡ ³ëÀÎ¿¡°Ô °¡±îÀÌ °¨
+        //ë¯¸ë¥´ê°€ ë…¸ì¸ì—ê²Œ ê°€ê¹Œì´ ê°
         StartCoroutine(mirMoveData.MoveToDest(dest, 0.7f));
 
         yield return new WaitForSeconds(1.5f);
@@ -164,7 +200,7 @@ public class ActionManager : MonoBehaviour
 
     void SetMainCamera(Camera getMainCamera)
     {
-        if(getMainCamera == playerCamera)
+        if (getMainCamera == playerCamera)
         {
             playerCamera.gameObject.SetActive(true);
             playerCamera.enabled = true;
@@ -188,7 +224,7 @@ public class ActionManager : MonoBehaviour
         GameManager.singleton.saveData.isPuzzleStart[0] = true;
 
         getQuestSaveData.questGoal = 1;
-        getQuestSaveData.SetGoalText("ÃÌÀå´ÔÀÇ ¼ú °¡Á®¿À±â", "¼ú : ");
+        getQuestSaveData.SetGoalText("ì´Œì¥ë‹˜ì˜ ìˆ  ê°€ì ¸ì˜¤ê¸°", "ìˆ  : ");
 
         questPrefab.SetActive(true);
         questNameText.text = getQuestSaveData.questNameText;
@@ -198,11 +234,12 @@ public class ActionManager : MonoBehaviour
 
         GameManager.singleton.SaveNowData();
         isActionPlaying = false;
+        tutorialPortal.SetActive(true);
     }
 
     IEnumerator OpenSound()
     {
-        //¹º°¡ ¿­¸®´Â ¼Ò¸®°¡ µé¸²
+        //ë­”ê°€ ì—´ë¦¬ëŠ” ì†Œë¦¬ê°€ ë“¤ë¦¼
 
         yield return new WaitForSeconds(1);
         dialogueManager.ScreenTouchEvent();
@@ -215,11 +252,46 @@ public class ActionManager : MonoBehaviour
         dest.position -= -new Vector3(1, 0, 0);
         ControlMirAction(true);
         OldMan oldManScript = oldMan.GetComponent<OldMan>();
-        //¹Ì¸£¿Í ³ëÀÎÀÌ ÇÔ²² º£ÀÌÄ¿¸®·Î °¨
+        //ë¯¸ë¥´ì™€ ë…¸ì¸ì´ í•¨ê»˜ ë² ì´ì»¤ë¦¬ë¡œ ê°
         StartCoroutine(oldManScript.MoveToDest(dest, 2f));
         StartCoroutine(mirMoveData.MoveToDest(dest, 2f));
 
         yield return new WaitForSeconds(2f);
+        isActionPlaying = false;
         dialogueManager.ScreenTouchEvent();
+    }
+
+    IEnumerator OldManDisappear()
+    {
+        oldMan.SetActive(false);
+        yield return new WaitForSeconds(1);
+
+        //ìš°ë‹¹íƒ•íƒ• ì†Œë¦¬ ë‚¨
+        yield return new WaitForSeconds(2);
+
+        oldMan.SetActive(true);
+        yield return new WaitForSeconds(1);
+
+        isActionPlaying = false;
+        dialogueManager.ScreenTouchEvent();
+    }
+
+    void GetQuest1()
+    {
+        QuestSaveData getQuestSaveData = GameManager.singleton.questSaveData;
+        GameManager.singleton.saveData.isPuzzleStart[1] = true;
+
+        getQuestSaveData.questGoal = 1;
+        getQuestSaveData.SetGoalText("ì´Œì¥ë‹˜ì˜ ì°½ê³ ë¡œ ê°€ì„œ ë¸”ë£¨ë² ë¦¬ ê°€ì ¸ì˜¤ê¸°", "ë¸”ë£¨ë² ë¦¬ : ");
+
+        questPrefab.SetActive(true);
+        questNameText.text = getQuestSaveData.questNameText;
+        questGoalText.text = getQuestSaveData.questGoalText;
+
+        GameManager.singleton.questSaveData = getQuestSaveData;
+
+        GameManager.singleton.SaveNowData();
+        isActionPlaying = false;
+        storagePortal.SetActive(true);
     }
 }

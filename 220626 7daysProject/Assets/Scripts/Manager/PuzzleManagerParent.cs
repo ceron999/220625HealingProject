@@ -20,7 +20,7 @@ public class PuzzleManagerParent : MonoBehaviour
     [SerializeField]
     protected Text questGoalText;
 
-    public string getColObjectName;
+    public string getColObjectName; //공격 콜라이더에 충돌한 객체 이름
 
     void Start()
     {

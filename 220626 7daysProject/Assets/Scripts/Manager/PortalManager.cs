@@ -18,8 +18,12 @@ public class PortalManager : MonoBehaviour
                 SceneManager.LoadScene("TutorialScene");
                 break;
             case "TutorialEndPortal":
-                Debug.Log("TutorialEndPortal");
                 UseTutorialEndPortal();
+                break;
+            case "StoragePortal":
+                UseStoragePortal();
+                break;
+            case "StorageEndPortal":
                 break;
         }
     }
@@ -35,6 +39,14 @@ public class PortalManager : MonoBehaviour
         {
             GameManager.singleton.SaveNowData();
             SceneManager.LoadScene("VillageScene");
+        }
+    }
+
+    void UseStoragePortal()
+    {
+        if (GameManager.singleton.saveData.isPuzzleStart[1])
+        {
+            SceneManager.LoadScene("StorageScene");
         }
     }
 }

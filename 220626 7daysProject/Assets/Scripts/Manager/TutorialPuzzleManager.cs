@@ -91,12 +91,12 @@ public class TutorialPuzzleManager : PuzzleManagerParent
             realChestAnimator.SetBool("isOpen", true);
             isRealChestActive = true;
 
-            //¼ú ¾òÀ½
+            //ìˆ  ì–»ìŒ
             StartCoroutine(GetDrink());
 
             GameManager.singleton.questSaveData.nowGetCount++;
             GameManager.singleton.questSaveData.isNowQuestClear = true;
-            GameManager.singleton.questSaveData.SetGoalText("ÃÌÀå´ÔÀÇ ¼ú °¡Á®¿À±â", "¼ú : ");
+            GameManager.singleton.questSaveData.SetGoalText("ì´Œì¥ë‹˜ì˜ ìˆ  ê°€ì ¸ì˜¤ê¸°", "ìˆ  : ");
             GameManager.singleton.saveData.isPuzzleClear[0] = true;
 
             questGoalText.text = GameManager.singleton.questSaveData.questGoalText;
@@ -117,7 +117,7 @@ public class TutorialPuzzleManager : PuzzleManagerParent
             yield return new WaitForSeconds(0.1f);
         }
 
-        //ÀÓ½Ã·Î ¸¸µë
+        //ì„ì‹œë¡œ ë§Œë“¬
         while (Input.GetMouseButtonDown(0))
         {
             yield return null;
