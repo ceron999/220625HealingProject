@@ -881,6 +881,10 @@ GameObject:
   - component: {fileID: 293495601}
   - component: {fileID: 293495600}
   - component: {fileID: 293495599}
+  - component: {fileID: 293495605}
+  - component: {fileID: 293495603}
+  - component: {fileID: 293495602}
+  - component: {fileID: 293495604}
   m_Layer: 7
   m_Name: OldMan
   m_TagString: NPC
@@ -973,6 +977,81 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &293495602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293495598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a18c78d856b7cfd499afac61973a19a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 1261899626}
+  actionManager: {fileID: 1506299757}
+  isNpcColEnter: 0
+--- !u!61 &293495603
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293495598}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.24, y: 0.48}
+    newSize: {x: 0.375, y: 0.75}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 0.48}
+  m_EdgeRadius: 0
+--- !u!114 &293495604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293495598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1717ed3d8a3367f429f5f734490801b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveDirection: 0
+--- !u!50 &293495605
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293495598}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &339446982
 GameObject:
   m_ObjectHideFlags: 0
@@ -5176,6 +5255,7 @@ MonoBehaviour:
   dialogueWrapper:
     dialogueArray: []
   dialogueWrapperName: 
+  npcName: 
   dialoguePrefab: {fileID: 2601142199259320572}
   characterNameText: {fileID: 2130730477}
   dialogueText: {fileID: 2050651036}
@@ -6153,6 +6233,7 @@ MonoBehaviour:
   questGoalText: {fileID: 1726305578}
   mir: {fileID: 612745470}
   oldMan: {fileID: 293495598}
+  bakery: {fileID: 1663022558}
   isActionPlaying: 0
 --- !u!1 &1518093891
 GameObject:

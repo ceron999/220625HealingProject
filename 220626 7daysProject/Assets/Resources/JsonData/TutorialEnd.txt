@@ -1,0 +1,85 @@
+{
+	"dialogueArray":
+		[
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"몰래! 가져왔어요!"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"촌장님",
+				"dialogue":"허허허. 잘했다. 미르야. 근데 목소리가 좀 줄이자꾸나. 우리 집이 바로 옆집이라 들킬까봐 두렵구나."
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"넵!"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"촌장님",
+				"dialogue":"그럼 이제 내가 약속을 지켜야 할 시간이겠지?"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"촌장님",
+				"dialogue":"따라오너라. 블루베리 파이를 주마."
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"엄마가 진짜 가끔 사줬는데! 촌장님. 고마워요!"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"촌장님",
+				"dialogue":"아니다. 내가 더 고맙지. 허허허."
+			},
+			{
+				"actionString":"MoveToBakery"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"촌장님",
+				"dialogue":"잠깐만 기다리고 있으렴"
+			},
+			{
+				"actionString":"OldManDisappear"
+			},
+			{
+				"actionString":"FindSound"
+			},
+			{
+				"actionString":"OldManAppear"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"촌장님",
+				"dialogue":"미르야...."
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"촌장님",
+				"dialogue":"정말 미안하지만 재료가 좀 모자라구나."
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"촌장님",
+				"dialogue":"혹시 우리 집 왼쪽에 있는 창고에서 블루베리를 가져와 줄 수 있겠니?"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"촌장님",
+				"dialogue":"금방 만들어주마."
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"넹! 바로 다녀올게요!"
+			},
+			{
+				"actionString":"GetQuest1"
+			}
+		]
+}

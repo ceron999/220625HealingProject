@@ -44,4 +44,9 @@ public class GameManager : MonoBehaviour
         jsonManager.SaveJson(saveData, "saveData");
         jsonManager.SaveJson(questSaveData, "questSaveData");
     }
+
+    public void ClearQuestData()
+    {
+        questSaveData = new QuestSaveData();
+    }
 }

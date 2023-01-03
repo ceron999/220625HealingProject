@@ -55,7 +55,8 @@ public class MirMove : MonoBehaviour
     {
         Vector2 nowPos = mirRigid.position;
         Vector2 destPos = dest.position;
-        destPos.x += 0.2f;
+        destPos.y = nowPos.y;
+        destPos.x += 0.3f;
 
         if (destPos.x > nowPos.x)
             moveDirection = 1;

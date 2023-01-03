@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ActionManager : MonoBehaviour
@@ -34,6 +35,9 @@ public class ActionManager : MonoBehaviour
     GameObject oldMan;
     MirMove mirMoveData;
 
+    [SerializeField]
+    GameObject bakery;
+
     public bool isActionPlaying = false;
 
     void Start()
@@ -66,10 +70,19 @@ public class ActionManager : MonoBehaviour
         }
     }
 
+    //퀘 깨고 초기화 시킬 때 쓰려고
+    public void ClearQuestPrefab()
+    {
+        questNameText.text = "";
+        questGoalText.text = "";
+        questPrefab.SetActive(false);
+    }
+
     public void SetAction(Dialogue nowDialogue)
     {
         switch (nowDialogue.action)
         {
+            //tutorial Actions
             case Actions.GoToOldMan:
                 Debug.Log("GotoOldMan");
                 StartCoroutine(GoToOldMan());
@@ -83,6 +96,23 @@ public class ActionManager : MonoBehaviour
                 StartCoroutine(OpenSound());
                 break;
 
+            //quest1 Actions
+            case Actions.MoveToBakery:
+                Debug.Log("MoveToBakery");
+                StartCoroutine(MoveToBakery());
+                break;
+            case Actions.OldManDisappear:
+                Debug.Log("OldManDisappear");
+                break;
+            case Actions.FindSound:
+                Debug.Log("FindSound");
+                break;
+            case Actions.OldManAppear:
+                Debug.Log("OldManAppear");
+                break;
+            case Actions.GetQuest1:
+                Debug.Log("GetQuest1");
+                break;
         }
     }
     public bool GetMirIsAction()
@@ -92,6 +122,9 @@ public class ActionManager : MonoBehaviour
 
     public void ControlMirAction(bool active)
     {
+        if (mirMoveData.moveDirection != 0)
+            mirMoveData.moveDirection = 0;
+
         mirMoveData.isAction = active;
 
         //미르 움직임이 멈추면서 콜라이더가 켜진 상태로 유지되는 현상 수정
@@ -174,5 +207,19 @@ public class ActionManager : MonoBehaviour
         yield return new WaitForSeconds(1);
         dialogueManager.ScreenTouchEvent();
         isActionPlaying = false;
+    }
+
+    IEnumerator MoveToBakery()
+    {
+        Transform dest = bakery.transform;
+        dest.position -= -new Vector3(1, 0, 0);
+        ControlMirAction(true);
+        OldMan oldManScript = oldMan.GetComponent<OldMan>();
+        //미르와 노인이 함께 베이커리로 감
+        StartCoroutine(oldManScript.MoveToDest(dest, 2f));
+        StartCoroutine(mirMoveData.MoveToDest(dest, 2f));
+
+        yield return new WaitForSeconds(2f);
+        dialogueManager.ScreenTouchEvent();
     }
 }

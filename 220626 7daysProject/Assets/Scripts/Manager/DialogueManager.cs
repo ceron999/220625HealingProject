@@ -12,6 +12,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] 
     DialogueWrapper dialogueWrapper;
     public string dialogueWrapperName;
+    public string npcName;
 
     [SerializeField] 
     GameObject dialoguePrefab;
@@ -72,6 +73,8 @@ public class DialogueManager : MonoBehaviour
         }
         if (dialoguePrefab.activeSelf == false)
         {
+            actionManager.ControlMirAction(true);
+
             dialogueWrapperName = getDialogueName;
             dialogueWrapper = jsonManager.ResourceDataLoad<DialogueWrapper>(dialogueWrapperName);
             dialogueWrapper.Parse();
@@ -286,5 +289,10 @@ public class DialogueManager : MonoBehaviour
             //페이드 효과
             dialoguePrefab.SetActive(false);
         }
+    }
+
+    void TalkNpc()
+    {
+
     }
 }
