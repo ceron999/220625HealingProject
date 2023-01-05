@@ -58,6 +58,7 @@
     <Compile Include="Assets\Scripts\Manager\PortalManager.cs" />
     <Compile Include="Assets\Scripts\UI\MainSceneBTN.cs" />
     <Compile Include="Assets\Scripts\Manager\TutorialPuzzleManager.cs" />
+    <Compile Include="Assets\Scripts\Manager\StorageManager.cs" />
     <Compile Include="Assets\Scripts\Manager\JsonManager.cs" />
     <Compile Include="Assets\Scripts\Class\SaveData\SaveData.cs" />
     <Compile Include="Assets\Scripts\OldScript\temp.cs" />
@@ -75,7 +76,6 @@
     <Compile Include="Assets\Scripts\Class\Dialogue\Dialogue.cs" />
     <Compile Include="Assets\Scripts\Class\Player\AttackCollider.cs" />
     <Compile Include="Assets\Scripts\Class\NPC\OldMan.cs" />
-    <Compile Include="Assets\Scripts\Manager\StorageManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Craftpix\craftpix-891178-free-3-character-sprite-sheets-pixel-art\license.txt" />
@@ -83,6 +83,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Craftpix\craftpix-981000-blacksmith-craft-asset-pixel-art-pack\License.txt" />
     <None Include="Assets\Craftpix\craftpix-981000-blacksmith-craft-asset-pixel-art-pack\Font.txt" />
+    <None Include="Assets\Craftpix\Medieval_pixel_art_asset\Medieval_pixel_art_tileset_1.0\pixel_snapping_README.txt" />
     <None Include="Assets\Resources\JsonData\TutorialFakeChest.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />

@@ -132,7 +132,7 @@ public class MirMove : MonoBehaviour
         
         if (hit.collider != null)
         {
-            if (hit.transform.name == "Tilemap")
+            if (hit.transform.name == "Tilemap" && hit.transform.name == "Ground")
             {
                 isJump = false;
             }
