@@ -117,10 +117,12 @@ public class StorageManager : PuzzleManagerParent
 
     IEnumerator OpenChestCoroutine()
     {
+        actionManager.ControlMirAction(true);
         isChestOpen = true;
         //Chest open
         chestAnimator = chest.GetComponent<Animator>();
         chestAnimator.SetBool("isOpen", true);
+        portalManager.isStorageEnterPortalOpen = true;
 
         yield return new WaitForSeconds(1);
 

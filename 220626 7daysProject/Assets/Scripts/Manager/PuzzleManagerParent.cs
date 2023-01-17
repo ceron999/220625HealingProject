@@ -9,6 +9,8 @@ public class PuzzleManagerParent : MonoBehaviour
     protected DialogueManager dialogueManager;
     [SerializeField]
     protected ActionManager actionManager;
+    [SerializeField] 
+    protected PortalManager portalManager;
     [SerializeField]
     protected GameObject prefabsCanvas;
     [SerializeField]

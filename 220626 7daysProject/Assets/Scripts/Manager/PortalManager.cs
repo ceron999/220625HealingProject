@@ -7,9 +7,11 @@ public class PortalManager : MonoBehaviour
 {
     [SerializeField]
     DialogueManager dialogueManager;
+    [SerializeField]
+    GameObject mir;
 
     //storage bool
-    bool isStorageEnterPortalOpen;
+    public bool isStorageEnterPortalOpen;
 
     public void MoveScene(string getPortalName)
     {
@@ -28,6 +30,7 @@ public class PortalManager : MonoBehaviour
                 UseStorageEnterPortal();
                 break;
             case "StorageExitPortal":
+                UseStorageExitPortal();
                 break;
         }
     }
@@ -56,18 +59,18 @@ public class PortalManager : MonoBehaviour
 
     void UseStorageEnterPortal()
     {
-        if(!isStorageEnterPortalOpen)
+        if(isStorageEnterPortalOpen)
         {
-            dialogueManager.LoadDialogue("StorageEnterPortalNotOpen");
+            mir.transform.position = GameObject.Find("StorageExitPortal").transform.position;
         }
         else
         {
-
+            dialogueManager.LoadDialogue("StorageEnterPortalNotOpen");
         }
     }
 
     void UseStorageExitPortal()
     {
-
+        
     }
 }

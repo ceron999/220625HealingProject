@@ -856,6 +856,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6509679275434489403, guid: 6c0b8d9e05676a74998ce04d6f6c77ab,
+        type: 3}
+      propertyPath: storageManager
+      value: 
+      objectReference: {fileID: 1106040059}
     - target: {fileID: 6509679275767406940, guid: 6c0b8d9e05676a74998ce04d6f6c77ab,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -1612,6 +1617,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 459897540}
+  mir: {fileID: 1388260540}
+  isStorageEnterPortalOpen: 0
 --- !u!4 &538299035
 Transform:
   m_ObjectHideFlags: 0
@@ -7776,6 +7783,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueManager: {fileID: 459897540}
   actionManager: {fileID: 591825957}
+  portalManager: {fileID: 538299034}
   prefabsCanvas: {fileID: 1908675975}
   dialoguePrefab: {fileID: 1908675974}
   questPrefab: {fileID: 1908675973}
