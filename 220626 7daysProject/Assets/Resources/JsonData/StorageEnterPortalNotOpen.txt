@@ -1,0 +1,10 @@
+{
+	"dialogueArray":
+		[
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"아직 열쇠가 없어서 들어갈 수가 없네."
+			}
+		]
+}

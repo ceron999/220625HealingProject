@@ -8,7 +8,8 @@ public class PortalManager : MonoBehaviour
     [SerializeField]
     DialogueManager dialogueManager;
 
-
+    //storage bool
+    bool isStorageEnterPortalOpen;
 
     public void MoveScene(string getPortalName)
     {
@@ -23,7 +24,10 @@ public class PortalManager : MonoBehaviour
             case "StoragePortal":
                 UseStoragePortal();
                 break;
-            case "StorageEndPortal":
+            case "StorageEnterPortal":
+                UseStorageEnterPortal();
+                break;
+            case "StorageExitPortal":
                 break;
         }
     }
@@ -48,5 +52,22 @@ public class PortalManager : MonoBehaviour
         {
             SceneManager.LoadScene("StorageScene");
         }
+    }
+
+    void UseStorageEnterPortal()
+    {
+        if(!isStorageEnterPortalOpen)
+        {
+            dialogueManager.LoadDialogue("StorageEnterPortalNotOpen");
+        }
+        else
+        {
+
+        }
+    }
+
+    void UseStorageExitPortal()
+    {
+
     }
 }

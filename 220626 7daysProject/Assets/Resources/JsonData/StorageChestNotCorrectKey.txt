@@ -1,0 +1,10 @@
+{
+	"dialogueArray":
+		[
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"이 열쇠는 맞지 않네... 새로운 열쇠를 가져오자."
+			}
+		]
+}

@@ -1,0 +1,10 @@
+{
+	"dialogueArray":
+		[
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"이미 열쇠를 가지고 있어. 일단 이것을 사용해 보자."
+			}
+		]
+}

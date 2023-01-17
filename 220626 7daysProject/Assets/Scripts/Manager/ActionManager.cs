@@ -58,17 +58,20 @@ public class ActionManager : MonoBehaviour
     }
     void SetPortalActive()
     {
-        if (!GameManager.singleton.saveData.isPuzzleClear[0])
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == "VillageScene")
         {
-            tutorialPortal.SetActive(true);
-        }
-        else if(!GameManager.singleton.saveData.isPuzzleClear[1])
-        {
-            storagePortal.SetActive(true);
-        }
-        else if(!GameManager.singleton.saveData.isPuzzleClear[2])
-        {
-            portal.SetActive(true);
+            if (!GameManager.singleton.saveData.isPuzzleClear[0])
+            {
+                tutorialPortal.SetActive(true);
+            }
+            else if (!GameManager.singleton.saveData.isPuzzleClear[1])
+            {
+                storagePortal.SetActive(true);
+            }
+            else if (!GameManager.singleton.saveData.isPuzzleClear[2])
+            {
+                portal.SetActive(true);
+            }
         }
     }
 

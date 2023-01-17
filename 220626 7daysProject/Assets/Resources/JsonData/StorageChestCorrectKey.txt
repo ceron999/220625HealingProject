@@ -1,0 +1,15 @@
+{
+	"dialogueArray":
+		[
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"열렸다.!"
+			},
+			{
+				"typeString":"Dialog",
+				"characterName":"미르",
+				"dialogue":"저기 있는 창고 열쇠인 것 같아. 한 번 열어보자."
+			}
+		]
+}

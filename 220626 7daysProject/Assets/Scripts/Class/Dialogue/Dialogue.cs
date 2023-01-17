@@ -12,6 +12,7 @@ public enum Actions
 {
     Null, GoToOldMan, GetTutorialQuest, OpenSound
         , MoveToBakery, OldManDisappear, GetQuest1
+        , GetStorageKey
 }
 
 [System.Serializable]

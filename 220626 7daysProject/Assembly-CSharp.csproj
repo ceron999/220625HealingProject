@@ -80,8 +80,10 @@
   <ItemGroup>
     <None Include="Assets\Craftpix\craftpix-891178-free-3-character-sprite-sheets-pixel-art\license.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\Resources\JsonData\StorageChestNotCorrectKey.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Craftpix\craftpix-981000-blacksmith-craft-asset-pixel-art-pack\License.txt" />
+    <None Include="Assets\Resources\JsonData\StorageChestCorrectKey.txt" />
     <None Include="Assets\Craftpix\craftpix-981000-blacksmith-craft-asset-pixel-art-pack\Font.txt" />
     <None Include="Assets\Craftpix\Medieval_pixel_art_asset\Medieval_pixel_art_tileset_1.0\pixel_snapping_README.txt" />
     <None Include="Assets\Resources\JsonData\TutorialFakeChest.txt" />
@@ -107,6 +109,7 @@
     <None Include="Assets\Resources\JsonData\TutorialEnd.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\Craftpix\craftpix-net-527225-farming-pixel-art-game-assets-pack\License.txt" />
+    <None Include="Assets\Resources\JsonData\StorgaeChestNoKey.txt" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Craftpix\craftpix-785613-cookery-game-assets-pixel-art-pack\License.txt" />
@@ -115,6 +118,7 @@
     <None Include="Assets\Craftpix\craftpix-781162-simple-platformer-tileset-pixel-art\license.txt" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\Craftpix\craftpix-net-527225-farming-pixel-art-game-assets-pack\Font.txt" />
+    <None Include="Assets\Resources\JsonData\GetKey.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>

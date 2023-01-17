@@ -6,6 +6,8 @@ public class AttackCollider : MonoBehaviour
 {
     [SerializeField]
     TutorialPuzzleManager tutorialPuzzleManager;
+    [SerializeField]
+    StorageManager storageManager;
 
     public string colObjectName;
 
@@ -18,6 +20,12 @@ public class AttackCollider : MonoBehaviour
             {
                 tutorialPuzzleManager.getColObjectName = colObjectName;
                 tutorialPuzzleManager.SetPuzzleProgress(colObjectName);
+            }
+
+            else if(storageManager != null)
+            {
+                storageManager.getColObjectName = colObjectName;
+                storageManager.SetPuzzleProgress(colObjectName);
             }
         }
     }

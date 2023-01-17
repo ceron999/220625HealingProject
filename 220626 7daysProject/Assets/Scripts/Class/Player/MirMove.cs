@@ -24,6 +24,7 @@ public class MirMove : MonoBehaviour
     public float moveDirection;                        //Mir의 이동 방향을 정하는 변수
     public float jumpPower;
     bool isMove = false;
+    [SerializeField]
     bool isJump = false;
 
     int tileLayer = 1 << 6; // tile의 레이어 = 6
@@ -128,11 +129,16 @@ public class MirMove : MonoBehaviour
     {
         //Debug.Log(mirRigid.velocity);
         Debug.DrawRay(mirRigid.position, Vector2.down * 0.3f, Color.red);
-        hit = Physics2D.Raycast(mirRigid.position, Vector2.down, 0.3f, tileLayer);
-        
+
+        //storage 타일맵이 좀 커서 해당 맵에서는 좀 다르게 가져갈 예정
+        if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name != "StorageScene")
+            hit = Physics2D.Raycast(mirRigid.position, Vector2.down, 0.3f, tileLayer);
+        else
+            hit = Physics2D.Raycast(mirRigid.position, Vector2.down, 1f, tileLayer);
+
         if (hit.collider != null)
         {
-            if (hit.transform.name == "Tilemap" && hit.transform.name == "Ground")
+            if (hit.transform.name == "Tilemap" || hit.transform.name == "Ground")
             {
                 isJump = false;
             }

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Craftpix/Medieval_pixel_art_asset/Medieval_pixel_art_props/Scenes/props_showcase_scene.unity
+- path: Assets/Scenes/StorageScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
